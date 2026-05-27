@@ -1,0 +1,156 @@
+/*Header*/
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        /*Logo*/
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        /*Navigation*/
+        nav {
+            display: flex;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: whitesmoke;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        /*HAMBURGER*/
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+        /*Footer*/
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #222;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+         /*Responsive Design*/
+        .responsive-image {
+           display: flex;
+           flex-direction: column;
+           gap: 15px;
+           align-items: center;
+        }
+        /*Marquee*/
+        .marquee {
+          background: #f4f4f4;
+          overflow: hidden;
+          white-space: nowrap;
+        }  
+        .marquee p {
+          display: inline-block;
+          padding-left: 100%;
+          animation: scroll 10s linear infinite;
+        } 
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
+        }
+        /*Image Section*/
+       .container {
+           padding: 20px;
+           text-align: center;
+        }
+        .container img {
+           width: 100%;
+           max-width: 600px;
+           height: auto;
+           border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            nav ul li {
+                margin: 10px 0;
+                text-align: center;
+            }
+            .hamburger {
+                display: flex;
+            }
+         nav.active {
+                    display: flex;
+                }
+                footer {
+                   font-size: 14px;
+                   bottom: 0;
+                }
+        }
+    </style>
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div class="logo">MySite</div>
+        <img src="Swanked_logo.avif" alt="Logo" width="30" height="30">
+        <nav id="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+        </div>
+    </header>
+<!--Marquee-->
+    <div class="marquee">
+        <p>🔥Welcome to our responsive website demo- Learn HTML & CSS Responsiveness!🔥</p>
+    </div>
+<!--image section-->
+  <div class="container">
+    <h2>Responsive Image</h2>
+        <img src="vanquish_hoodie.jpg" alt="Sample Image"><img src="Swankedxsoundscape.jpg" alt="Sample Image">
+    </div>
+
+      <!--Script-->
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("nav");
+            nav.classList.toggle("active"); 
+        }
+    </script>
+
+    <!--Footer-->
+    <footer>
+        <p>&copy; 2023 MySite. All rights reserved.</p>
+    </footer>
+  
+</body>
+</html>
