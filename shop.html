@@ -9,57 +9,131 @@
 <body>
     <input type="checkbox" id="theme-toggle" class="toggle-checkbox">
 
-<label for="theme-toggle" class="toggle-label">
-    <span class="toggle-button-text">Switch Theme</span>
-</label>
-    <header>
-    <h1>Swanked</h1>
-    <nav>
-        <a href="index.html">Home</a> |
-        <a href="shop.html">Shop</a> |
-        <a href="Thearchive.html">The Archive</a> |
-        <a href="Journal.html">Journal</a> |
-        <a href="Aboutus.html">About Us</a>
-    </nav>     
-   </header> 
-   <h2>Shop</h2>
- <!-- PRODUCT 1 -->
-  <h2>Vanquish Hoodie</h2>
-  <img src="Images/vanquish_hoodie.jpg" width="200"> 
-  <p>Price: R899</p>
-  <button>Add to Cart</button>
+    <label for="theme-toggle" class="toggle-label">
+        <span class="toggle-button-text">Switch Theme</span>
+    </label>
+<header class="main-header">
+    <img src="Images/Swanked_banner.png" alt="Logo" width="200" height="200">
+    
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="Thearchive.html">The Archive</a></li>
+            <li><a href="Journal.html">Journal</a></li>
+            <li><a href="Aboutus.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
 
-  <hr>
+    <!-- Utilizing your working header class -->
+    <h2 class="section-title">Shop Collections</h2>
+    <p>Discover our curated selection of streetwear and sneakers, blending style and culture.</p>
+        <!-- PRODUCT 1 -->
+        <!-- THE PREMIUM STREETWEAR GRID WRAPPER -->
+    <div class="shop-grid">
 
-  <!-- PRODUCT 2 -->
-  <h2>Vanquish T-Shirt</h2>
-  <img src="Images/vanquish_tee.jpg" width="200">
-  <p>Price: R499</p>
-  <button>Add to Cart</button>
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="Images/vanquish_hoodie.jpg" alt="Vanquish Hoodie">
+            </div>
+            <div class="product-info">
+                <!-- Group text layout to keep it aligned on the left -->
+                <div class="product-text-meta">
+                    <span class="product-brand">Swanked Apparel</span>
+                    <h3 class="product-title">Vanquish Hoodie</h3>
+                    <span class="product-price">R899</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Add to cart">
+                    <div class="cart-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
 
-  <hr>
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="Images/vanquish_tee.jpg" alt="Vanquish T-Shirt">
+            </div>
+            <div class="product-info">
+                <!-- Group text layout to keep it aligned on the left -->
+                <div class="product-text-meta">
+                    <span class="product-brand">Swanked Apparel</span>
+                    <h3 class="product-title">Vanquish T-Shirt</h3>
+                    <span class="product-price">R499</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Add to cart">
+                    <div class="cart-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
 
-  <!-- PRODUCT 3 -->
-  <h2>Nike Dunks</h2>
-  <img src="Images/nike_dunks.jpg" width="200">
-  <p>Price: R1,299</p>
-  <button>Add to Cart</button>
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="Images/nike_dunks.jpg" alt="Nike Dunks">
+            </div>
+            <div class="product-info">
+                <!-- Group text layout to keep it aligned on the left -->
+                <div class="product-text-meta">
+                    <span class="product-brand">Footwear Tier</span>
+                    <h3 class="product-title">Nike Dunks</h3>
+                    <span class="product-price">R1,299</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Add to cart">
+                    <div class="cart-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
 
-  <hr>
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+            <div class="product-image-wrapper">
+                <img src="Images/newera_cap.jpg" alt="New Era Cap">
+            </div>
+            <div class="product-info">
+                <!-- Group text layout to keep it aligned on the left -->
+                <div class="product-text-meta">
+                    <span class="product-brand">Headwear Core</span>
+                    <h3 class="product-title">New Era Cap</h3>
+                    <span class="product-price">R699</span>
+                </div>
+                <button class="add-to-cart-btn" aria-label="Add to cart">
+                    <div class="cart-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                </button>
+            </div>
+        </div>
 
-  <!-- PRODUCT 4 -->
-  <h2>New Era Cap</h2>
-  <img src="Images/newera_cap.jpg" width="200">
-  <p>Price: R699</p>
-  <button>Add to Cart</button>
+    </div> <!--shop grid-->
 
-
-<footer>
-    <hr>
-    <p>&copy; 2026 Swanked</p>
+    <!-- FOOTER SECTION -->
+<footer class="site-footer">
+    <p>&copy; 2024 Swanked. All rights reserved.</p>
 </footer>
-
-</body>
-</html>
 </body>
 </html>

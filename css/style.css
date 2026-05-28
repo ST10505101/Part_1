@@ -71,6 +71,29 @@ body {
 }
 
 /* ==========================================================================
+   Navigation & Global Layout
+   ========================================================================== */
+   /* Reset basic spacing */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Puts space between links */
+}
+
+#nav a {
+    color: white; /* Ensure text is visible */
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* ==========================================================================
    HERO GRID LAYOUT
    ========================================================================== */
 .hero-grid-container {
@@ -95,33 +118,24 @@ body {
 }
 
 /* ==========================================================================
-   SWANKED WIDE BANNER LOGO LAYOUT
+   SWANKED  LOGO LAYOUT
    ========================================================================== */
-.logo-banner-container {
-    width: 100%;             /* Forces the outer wrapper to span edge-to-edge */
-    padding: 20px 0;         /* Generates clean breathing room above and below the logo */
-    background-color: var(--background-color); /* Dynamically switches with your theme toggle! */
+/* Standard Logo Styling */
+.brand-logo {
     display: flex;
-    justify-content: center; /* Keeps the spanning logo perfectly centered */
     align-items: center;
-    box-sizing: border-box;
-    border-bottom: 1px solid var(--subtle-text); /* Optional clean streetwear accent line */
 }
 
-.banner-logo {
-    width: 85%;              /* Makes the logo image span across 85% of the screen width */
-    max-width: 1200px;       /* Caps it on giant desktop monitors so it doesn't get ridiculously oversized */
-    height: auto;            /* Keeps the original aspect ratio so it never distorts or stretches */
-    object-fit: contain;     /* Ensures the entire .avif graphic is fully visible and sharp */
-    
-    /* Adds a sleek transition for when your user switches themes */
-    transition: filter 0.3s ease; 
+.logo-image {
+    height: 50px;      /* Adjust this number to make the logo larger or smaller */
+    width: auto;       /* Keeps the proportions correct */
+    display: block;
 }
 
 /* 💡 THEME SWITCH BONUS: 
    If your logo is black text and your user switches to "Nocturnal" (dark mode),
    this rule will instantly invert the logo to white text so it stays visible! */
-:root:has(.toggle-checkbox:checked) .banner-logo {
+:root:has(.toggle-checkbox:checked) .logo-image {
     filter: invert(1);       /* Flips black graphics to white instantly */
 }   
 
@@ -283,4 +297,168 @@ body {
         transform: scale(0.7);    /* Shrinks back down as you scroll past it and it leaves the top */
         opacity: 0.3;             /* Fades back out */
     }
+}
+
+
+/* ==========================================================================
+   PRODUCT CARD & GRID ENGINE
+   ========================================================================== */
+
+/* This turns your stacked items into a gorgeous multi-column grid layout */
+.shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px 24px;
+    padding: 60px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+/* This is the crucial block that shrinks those massive images instantly! */
+.product-image-wrapper {
+    width: 100%;
+    height: 380px; /* Forces a perfect, high-end editorial height */
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.product-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents stretched or squished clothes */
+}
+
+/* ==========================================================================
+   PRODUCT TEXT & ROW CONTROLLER
+   ========================================================================== */
+
+/* This splits your text on the left and moves your cart button over to the right */
+.product-info {
+    position: relative;
+    padding: 16px 0 4px 0;
+    display: flex;
+    flex-direction: row;       
+    justify-content: space-between; 
+    align-items: flex-end;     
+}
+
+/* Groups the typography together inside the row */
+.product-text-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.product-brand {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--accent-color);
+}
+
+
+/* ==========================================================================
+   MINIMALIST CART BUTTON ENGINE
+   ========================================================================== */
+
+.add-to-cart-btn {
+    width: 50px;                 /* Clean, high-end square profile */
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--text-color, #ffffff); 
+    border: 1px solid var(--text-color, #ffffff);
+    margin: 0;                   /* Cleaned up margin to sit side-by-side perfectly */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+                border-color 0.3s ease, 
+                color 0.3s ease;
+}
+
+/* Vector Cart Sizing & Balance */
+.cart-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+}
+
+.cart-icon {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Hover Engine: Flashes your active accent color and gives a premium bounce */
+.add-to-cart-btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #ffffff; /* Stark contrast backup */
+}
+
+.add-to-cart-btn:hover .cart-icon {
+    transform: scale(1.1); /* Subtle vector pop when interactive */
+}
+
+/* Dynamic line balancing for light mode / negative mode adjustments */
+body.negative-mode .add-to-cart-btn {
+    border-color: var(--text-color, #000000);
+}
+
+/* ==========================================================================
+   Archive Page & Product Listing Layout
+   ========================================================================== */
+   /* 1. The Container for your Grid */
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 40px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 2. The Items inside the Grid */
+.archive-item {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+    align-items: center; /* Centers everything */
+    text-align: center;
+}
+
+/* 3. The Images */
+.archive-item img {
+    width: 100%;       
+    max-width: 400px;  /* Adjust this to make images bigger or smaller */
+    height: auto;      
+    display: block;    
+    border-radius: 8px;
 }
