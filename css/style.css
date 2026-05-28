@@ -1,16 +1,22 @@
-/*Theme variables (Nocturnal and Inverted)*/
-   /* 1. Global defaults (Nocturnal Mode) */
+/* ==========================================================================
+   THEME VARIABLES (ORANGE NOCTURNAL / ELECTRIC BLUE NEGATIVE)
+   ========================================================================== */
+
+/* 1. Global Defaults (Nocturnal Mode - Your Default State) */
 :root {
     --background-color: #000000;
     --text-color: #ffffff;
-    --accent-color: #ff4500;
+    --accent-color: #ff4500;  /* 🟧 Blazing Orange for dark mode */
     --subtle-text: #aaaaaa;
 }
-/* 2. GLOBAL TRIGGER: Change the variables for the ENTIRE website body */
-:root:has(.toggle-checkbox:checked) {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --subtle-text: #555555;
+
+/* 2. Global Trigger (The Negative State) */
+.toggle-checkbox:checked ~ body,
+:root:has(.toggle-checkbox:checked) {       
+    --background-color: #ffffff; 
+    --text-color: #000000; 
+    --accent-color: #0047ff;  /* 🟦 Swaps to Electric Blue when toggled! */
+    --subtle-text: #555555; 
 }
 
 /* 3. TARGETED RULES: Keep your logo inversion working alongside the variables */
@@ -23,16 +29,6 @@ body {
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
     transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/*Alternate theme: Inverted (negative image effect)*/
-/* When the checkbox is clicked, it flips the light values across the entire site*/
-.toggle-checkbox:checked ~body,
-:root:has(.toggle-checkbox:checked) {       
-    --background-color: #ffffff; /*Pure White*/
-    --text-color: #000000; /*Pure Black text*/
-    --accent-color: #ff4500; /*keeps the signature accent color running through both themes*/
-    --subtle-text: #555555; /*Darker gray text for clean reading on white*/
 }
 
 /*Hidden checkbox and toggle styling*/
@@ -74,15 +70,9 @@ body {
     color:#ffffff; /*crisp white text on hover*/
 }
 
-
-
-
-
-
-
-
-
-
+/* ==========================================================================
+   HERO GRID LAYOUT
+   ========================================================================== */
 .hero-grid-container {
     display: flex !important;  /* FORCES the browser to place them next to each other */
     flex-direction: row !important; /* Forces horizontal alignment */
@@ -134,3 +124,163 @@ body {
 :root:has(.toggle-checkbox:checked) .banner-logo {
     filter: invert(1);       /* Flips black graphics to white instantly */
 }   
+
+/* ==========================================================================
+   STREETWEAR EDITORIAL TYPOGRAPHY & LAYOUT
+   ========================================================================== */
+
+/* Apply a clean, heavy sans-serif typeface to eliminate the default Times New Roman look */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* 1. Hero Content Styling */
+.hero-text-block {
+    padding: 60px 4%;
+    text-align: left;
+}
+
+.main-heading {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: var(--subtle-text);
+    margin-bottom: 30px;
+}
+
+/* 2. Premium Industrial Button */
+.shop-btn {
+    display: inline-block;
+    padding: 14px 36px;
+    background-color: var(--accent-color); /* Blazing Brand Orange */
+    color: #ffffff !important;             /* Keeps text readable */
+    text-decoration: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    border: 2px solid var(--accent-color);
+    transition: all 0.2s ease-in-out;
+}
+
+.shop-btn:hover {
+    background-color: transparent;
+    color: var(--accent-color) !important;
+    transform: translateY(-2px);
+}
+
+/* 3. Section Informational Formatting */
+.info-section {
+    padding: 40px 4%;
+    max-width: 800px; /* Restricts paragraph length for much cleaner editorial layout reading */
+}
+
+.section-heading {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.section-text {
+    font-size: 1.1rem;
+    color: var(--subtle-text);
+}
+
+/* 4. Minimalist Features List */
+.features-list {
+    list-style: none; /* Removes the old unstyled generic dots */
+    padding: 0;
+    margin: 0;
+}
+
+.features-list li {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Adds a very clean dividers grid */
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Adds a sleek brand-colored dash design before each list point */
+.features-list li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: 900;
+}
+
+/* 5. Minimalist Footer Border Anchor */
+.site-footer {
+    margin-top: 60px;
+    padding: 30px 4%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+.site-footer p {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--subtle-text);
+}
+
+/* ==========================================================================
+   BULLETPROOF LEMKUS HEADER ENGINE (WORKS EVERYWHERE)
+   ========================================================================== */
+
+.section-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -1px;
+    color: var(--text-color);
+    display: inline-block;
+    
+    /* Smooth transition for when the mouse touches or leaves the text */
+    transition: letter-spacing 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+                color 0.3s ease;
+    
+    transform-origin: left center;
+}
+
+/* When the user hovers over the section title, it expands beautifully */
+.section-title:hover {
+    letter-spacing: 4px;             /* Spreads the street culture typography out */
+    transform: scale(1.05);          /* Elegantly enlarges the text */
+    color: var(--accent-color);      /* Flashes Orange (Dark Mode) or Electric Blue (Negative Mode) */
+    cursor: default;
+}
+
+/* ==========================================================================
+   THE SCROLL KEYFRAME ENGINE
+   ========================================================================== */
+@keyframes enlargeAndShrink {
+    0% {
+        transform: scale(0.7);    /* Small when it first enters from the bottom */
+        opacity: 0.3;             /* Blurs into background */
+    }
+    50% {
+        transform: scale(1.3);    /* MASSIVE zoom when the section hits the center dead-on */
+        opacity: 1;               /* Full bright contrast focus */
+        color: var(--accent-color); /* Option: Flash your signature orange when active! */
+    }
+    100% {
+        transform: scale(0.7);    /* Shrinks back down as you scroll past it and it leaves the top */
+        opacity: 0.3;             /* Fades back out */
+    }
+}
