@@ -109,6 +109,14 @@ The user interface is built around a heavy photographic film aesthetic featuring
 
 ---
 
+### Latest Milestone Updates
+* **Fixed Browser Cache Blocks:** Successfully implemented hard-reload strategies to bypass stubborn local browser cache locks, ensuring style updates render instantly.
+* **Synchronized HTML/CSS Architecture:** Cleaned up and refactored semantic element class bindings (`.section-title`) so the document markup perfectly connects with the stylesheet engine.
+* **Engineered Lemkus-Inspired Typography:** Built a premium, fluid hover-expansion typography layout that dynamically scales text and smoothly increases letter-spacing (`letter-spacing: 4px`).
+* **Synced Distributed Workspace:** Resolved local/remote repository divergence issues by safely rebasing the codebase (`git pull --rebase`) and locking local files into Git tracking configuration.
+
+---
+
 ## 👤 Author
 **Ammaarah Mostert**  
 ST10505101  
