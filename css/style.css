@@ -1,16 +1,65 @@
-/*header*/
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/*Theme variables (Nocturnal and Inverted)*/
+    /*Default theme: Nocturnal*/
+:root {
+    --background-color: #000; /*Pure Black*/
+    --text-color: #ffffff; /*Pure White*/
+    --accent-color: #ff4500; /*Electric orange/red*/
+    --subtle-text: #aaaaaa; /*Muted gray for secondary text*/
 }
 
-/*Logo*/
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+/*Alternate theme: Inverted (negative image effect)*/
+/* When the checkbox is clicked, it flips the light values across the entire site*/
+.toggle-checkbox:checked ~body,
+:root:has(.toggle-checkbox:checked) {       
+    --background-color: #ffffff; /*Pure White*/
+    --text-color: #000000; /*Pure Black text*/
+    --accent-color: #ff4500; /*keeps the signature accent color running through both themes*/
+    --subtle-text: #555555; /*Darker gray text for clean reading on white*/
 }
+
+/*Hidden checkbox and toggle styling*/
+/*hide the default browser checkbox*/
+.toggle-checkbox {
+    display: none;
+}
+/*Style the label to look like a toggle switch*/
+.toggle-label {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    /*give it a solid background so it never blends into the page background, ensuring it's always visible and clickable*/
+    background-color: var(--text-color); /*Transparent background to blend with both themes*/
+    color: var(--background-color);
+
+    /*clean, blocky streetwear borders*/
+    border: 2px solid var(--text-color);
+    padding: 10px 22px; 
+
+    /*Typography formatting*/
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+
+    cursor: pointer;
+    z-index: 9999; /*Forces it to float on top of everything*/
+    display: inline-block;
+    transition: all 0.2s ease-in-out; /*Smooth transition for hover effects*/   
+}
+
+/*make it flash the signature orange accent color when hovered over*/
+.toggle-label:hover {
+    background-color: var(--accent-color); /*Turns blazing red/orange*/
+    border-color: var(--accent-color); /*Matches the background for a bold, unified look*/
+    color:#ffffff; /*crisp white text on hover*/
+}
+
+
+   
+
+
+
+
+
