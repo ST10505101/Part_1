@@ -84,6 +84,31 @@ Make sure these files are included:
 
 ---
 
+## 🎨 Design Philosophy & Architecture
+
+### Theme Infrastructure
+The user interface is built around a heavy photographic film aesthetic featuring two distinct view modes:
+* **Nocturnal Mode (Default):** A sleek, black-out viewport (`#000000`) paired with sharp white typography and a blazing electric orange/red accent (`#ff4500`).
+* **Inverted Mode:** A high-contrast negative film effect that flips dark and light values seamlessly while maintaining the iconic signature accent branding color.
+
+---
+
+ ## 📋 Project Status & Progress Tracker
+
+### ✅ Finished (Part 2 Layout & CSS)
+* **Widescreen Brand Identity:** Implemented a full-width, edge-to-edge responsive header banner optimized to scale dynamically across viewports.
+* **Component Encapsulation:** Refactored layout architecture using clean semantic groupings (`<header>`, `<section>`) bundled within container `<div>` elements for optimal Flexbox positioning.
+* **Pure CSS State Management:** Engineered a fully functional theme toggle utilizing the **CSS Checkbox Hack** (`:has()` and sibling combinator architecture) to manipulate custom variable properties at the `:root` level.
+* **Typographic Architecture:** Replaced browser default styles with clean, high-contrast streetwear editorial layouts.## 📋 Project Status & Progress Tracker
+
+---
+
+### ⏳ In Progress
+* **Multipage Synchronization:** Currently setting up structural container layouts and pasting core structural components across alternative project pages (`shop.html`, `Thearchive.html`, `Journal.html`, `Aboutus.html`).
+* **Asset Integration:** Exporting custom graphic layouts from Canva to serve as unified high-performance branding banners.
+
+---
+
 ## 👤 Author
 **Ammaarah Mostert**  
 ST10505101  
