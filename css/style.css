@@ -435,30 +435,38 @@ body.negative-mode .add-to-cart-btn {
 /* ==========================================================================
    Archive Page & Product Listing Layout
    ========================================================================== */
-   /* 1. The Container for your Grid */
+  /* Container for the whole section to ensure it stays centered */
+.archive-container {
+    max-width: 1200px;
+    margin: 0 auto; /* This centers the whole block on the page */
+    padding: 20px;
+}
+
+/* Header styling */
+.archive-header {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Grid styling */
 .archive-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 40px; 
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    width: 100%;
 }
 
-/* 2. The Items inside the Grid */
-.archive-item {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px;
-    align-items: center; /* Centers everything */
-    text-align: center;
-}
-
-/* 3. The Images */
 .archive-item img {
     width: 100%;       
-    max-width: 400px;  /* Adjust this to make images bigger or smaller */
     height: auto;      
     display: block;    
     border-radius: 8px;
+}
+
+/* Responsive: Stack to 1 column on your tablet (Samsung Galaxy Tab 3 Lite) */
+@media (max-width: 768px) {
+    .archive-grid {
+        grid-template-columns: 1fr;
+    }
 }
