@@ -540,3 +540,122 @@ h3:hover {
 .section-title {
     margin-bottom: 20px;
 }
+
+/*=======================================================================
+   About Page & Contact Form Layout
+   ======================================================================*/
+ .about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Space between text and image */
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1; /* Takes up half the space */
+    color: var(--text-color);
+}
+
+.about-image {
+    flex: 1; /* Takes up the other half */
+}
+
+.about-image img {
+    width: 100%; /* Makes image responsive */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure headings use your accent color */
+.about-text h2, .about-text h3 {
+    color: var(--accent-color);
+}
+.content-card {
+    background-color: var(--background-color); /* Matches your theme background */
+    border: 1px solid var(--subtle-text); /* Subtle outline */
+    border-radius: 20px; /* The rounded corners */
+    padding: 25px;
+    margin-bottom: 20px; /* Creates the gap between your cards */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.form-container {
+    background-color: var(--background-color); 
+    border: 1px solid var(--subtle-text);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 350px; /* Reduced width to make the form smaller */
+    width: 100%;
+    margin: 50px 0 50px 50px; /* Aligns to the left with 50px offset from the edge */
+}
+
+/* Ensure the submit button doesn't stretch weirdly */
+input[type="submit"] {
+    width: 100%;
+    margin-top: 15px;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+  
+   /* Ensure labels are always visible */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color); /* This will swap between white and black */
+    font-weight: 600;
+}
+
+/* Ensure input text is always visible and readable */
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    /* Use a contrasting background based on theme if needed, 
+       or keep a neutral color that works in both */
+    background-color: var(--background-color); 
+    border: 1px solid var(--subtle-text);
+    color: var(--text-color); /* This ensures the text matches your theme */
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Force the Submit button to pop */
+input[type="submit"] {
+    background-color: var(--accent-color);
+    color: #ffffff; /* Keeps text white for better contrast against orange/blue */
+    border: none;
+    /* ... rest of your button styling */
+}
+.social-links {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+    gap: 25px; /* Spacing for your icons */
+}
+
+.social-links a {
+    color: var(--text-color); /* Themed to match Nocturnal/Electric */
+    font-size: 30px; /* Logo sizing */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color); /* Accent color pop */
+    transform: scale(1.2); /* Icon animation */
+}

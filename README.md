@@ -135,6 +135,12 @@ The Journal page provides a space for community engagement, featuring:
 * **Synced Distributed Workspace:** Resolved local/remote repository divergence issues by safely rebasing the codebase (`git pull --rebase`) and locking local files into Git tracking configuration.
 * Implemented a CSS Grid layout for the Archive section to organize concept drops.
 * Integrated a curated Spotify "Soundscape" playlist to enhance brand atmosphere.
+* Fixed issues with the background of the contact form.
+## About Us Page Refresh
+- **Layout Optimization**: Implemented a modern, responsive two-column split-layout for the "About Us" section, pairing brand narrative with immersive store imagery.
+- **Thematic Integration**: Updated section headings ("Our Story", "Our Mission") and applied CSS variables to ensure seamless styling between "Nocturnal" and "Electric" modes.
+- **Refined Aesthetics**: Streamlined visual hierarchy by removing rigid borders in favor of clean whitespace and responsive typography, enhancing the overall "Swanked" editorial feel.
+- **Asset Integration**: Integrated `inside_swanked.png` to anchor the brand identity and provide visual context for the storefront experience.
 
 ---
 
