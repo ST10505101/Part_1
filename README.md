@@ -101,14 +101,19 @@ The user interface is built around a heavy photographic film aesthetic featuring
 * **Pure CSS State Management:** Engineered a fully functional theme toggle utilizing the **CSS Checkbox Hack** (`:has()` and sibling combinator architecture) to manipulate custom variable properties at the `:root` level.
 * **Typographic Architecture:** Replaced browser default styles with clean, high-contrast streetwear editorial layouts.## 📋 Project Status & Progress Tracker
     
-    ## Architecture & Layout(Archive Page)
+### Architecture & Layout
     The project is organized into distinct archive sections, utilizing a responsive CSS Grid system to maintain consistency across devices:
+-**Archive Page**
+- Core Essentials: Introduces the debut collection through a curated lifestyle narrative.
+- Street Study: A visual exploration of collective aesthetics, paired with detail-oriented product highlights.
+- Soundscape: An interactive integration of brand atmosphere, featuring a centered, event-curated Spotify playlist.
 
-- **Core Essentials**: Introduces the debut collection through a curated lifestyle narrative.
-- **Street Study**: A visual exploration of collective aesthetics, paired with detail-oriented product highlights.
-- **Soundscape**: An interactive integration of brand atmosphere, featuring a centered, event-curated Spotify playlist.
-
-## Recent Updates
+- **Journal**
+The Journal page provides a space for community engagement, featuring:
+- Curated sneaker and streetwear news.
+- A Community Lookbook displaying user styles.
+- Integrated Swanked Soundscape playlists.
+### Recent Updates
 - Transitioned to a 3-column responsive grid layout for all archive sections.
 - Implemented dedicated containers for each project drop to ensure visual separation.
 - Integrated high-energy event photography alongside the Spotify audio player for a unified brand experience.
