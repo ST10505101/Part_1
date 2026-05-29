@@ -141,6 +141,10 @@ The Journal page provides a space for community engagement, featuring:
 - **Thematic Integration**: Updated section headings ("Our Story", "Our Mission") and applied CSS variables to ensure seamless styling between "Nocturnal" and "Electric" modes.
 - **Refined Aesthetics**: Streamlined visual hierarchy by removing rigid borders in favor of clean whitespace and responsive typography, enhancing the overall "Swanked" editorial feel.
 - **Asset Integration**: Integrated `inside_swanked.png` to anchor the brand identity and provide visual context for the storefront experience.
+## Bug Fix: Navigation Theme Visibility
+- **CSS Conflict Resolution**: Identified and resolved a specificity conflict between hard-coded color styles and theme-aware CSS variables.
+- **Dynamic Theme Implementation**: Updated the navigation CSS to utilize the `var(--text-color)` variable, ensuring the navigation text maintains high contrast against the background in both "Nocturnal" and "Electric" modes.
+- **Consistency Optimization**: Standardized navigation link properties to ensure a uniform user experience
 
 ---
 
