@@ -108,7 +108,7 @@ The user interface is built around a heavy photographic film aesthetic featuring
 - Street Study: A visual exploration of collective aesthetics, paired with detail-oriented product highlights.
 - Soundscape: An interactive integration of brand atmosphere, featuring a centered, event-curated Spotify playlist.
 
-- **Journal**
+-**Journal**
 The Journal page provides a space for community engagement, featuring:
 - Curated sneaker and streetwear news.
 - A Community Lookbook displaying user styles.
