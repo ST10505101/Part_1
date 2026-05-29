@@ -145,7 +145,13 @@ The Journal page provides a space for community engagement, featuring:
 - **CSS Conflict Resolution**: Identified and resolved a specificity conflict between hard-coded color styles and theme-aware CSS variables.
 - **Dynamic Theme Implementation**: Updated the navigation CSS to utilize the `var(--text-color)` variable, ensuring the navigation text maintains high contrast against the background in both "Nocturnal" and "Electric" modes.
 - **Consistency Optimization**: Standardized navigation link properties to ensure a uniform user experience
-
+## Product Catalog Expansion
+- **Grid Layout Implementation**: Integrated a responsive CSS Grid system (`.product-grid`) to display 9 curated products, ensuring a clean, symmetrical layout across different screen sizes.
+- **Component Reusability**: Standardized the `product-card` HTML/CSS structure, enabling consistent styling for product meta-data and interactive elements like the "Add to Cart" button.
+- **Dynamic Alignment**: Utilized Flexbox within the product cards to align branding, pricing, and action buttons for a polished, professional storefront aesthetic.
+## Homepage Dynamic Enhancements
+- **Scroll Marquee Implementation**: Added a high-impact, theme-aware CSS marquee to the home page for dynamic messaging.
+- **Animation Integration**: Utilized CSS keyframe animations to create a seamless, infinite scroll effect that remains consistent across all site themes.
 ---
 
 ## 👤 Author

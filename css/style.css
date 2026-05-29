@@ -80,7 +80,21 @@ header {
     align-items: center;
     padding: 20px;
 }
+/* Nav Link Styling */
+.nav-links a {
+    color: var(--text-color); /* This variable ensures contrast against your background */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent; 
+}
 
+/* Hover Effect for visual feedback */
+.nav-links a:hover {
+    color: var(--accent-color); /* Switches to your accent color on hover */
+    border-bottom: 2px solid var(--accent-color); 
+}
 #nav ul {
     display: flex;
     list-style: none;
@@ -88,11 +102,49 @@ header {
 }
 
 #nav a {
-    color: white; /* Ensure text is visible */
+    /* REMOVE THIS: color: white; */
+    /* Use the variable instead so it switches based on the theme */
+    color: var(--text-color); 
     text-decoration: none;
     font-size: 18px;
+    /* Keeping your other properties */
+}
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--accent-color); /* Theme-aware background */
+    color: white; /* Contrast text */
+    padding: 10px 0;
 }
 
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+.about-container {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.about-heading {
+    color: var(--accent-color); /* Uses your Electric/Orange accent */
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-body {
+    color: var(--text-color); /* Ensures visibility in all themes */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
 /* ==========================================================================
    HERO GRID LAYOUT
    ========================================================================== */
