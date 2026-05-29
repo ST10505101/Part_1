@@ -711,3 +711,33 @@ input[type="submit"] {
     color: var(--accent-color); /* Accent color pop */
     transform: scale(1.2); /* Icon animation */
 }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px;
+    padding: 10px;
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+.product-image-wrapper img {
+    width: 100%;    /* This keeps them fitting the width of the card */
+    height: auto;   /* This is the key: it allows the height to scale naturally */
+    display: block; /* Removes unwanted gaps below the image */
+}
+/* Apply the effect to Cards, Headings, and the Cart Icon */
+.product-card:hover, .product-card:active, .product-card:focus,
+.product-title:hover, .product-title:active, .product-title:focus,
+.cart-icon-wrapper:hover, .cart-icon-wrapper:active, .cart-icon-wrapper:focus {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    /* Optional: change color to show it's active */
+    color: var(--accent-color); 
+}
