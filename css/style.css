@@ -153,6 +153,65 @@ header {
     margin-bottom: 15px;
     text-transform: uppercase;
 }
+.about-hero-bg {
+    /* ⬇️ The image file name is specified right here ⬇️ */
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)), 
+                url('../images/inside_swanked.png') no-repeat center center;
+    background-size: cover;
+}
+/* =========================================================================
+   REVISED ABOUT US BACKGROUND OVERLAY (FIXED SYNTAX)
+   ========================================================================== */
+
+/* 🌕 Default Nocturnal/Dark Theme: Uses a crisp, deep overlay shield */
+body.dark-theme .about-hero-bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)), 
+                url('../images/inside_swanked.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Force headings (both h2 and h3) to stand out sharply on dark background */
+body.dark-theme .about-hero-bg h2 {
+    color: #0052ff !important; /* Matches your electric brand blue from image_c161b8.jpg */
+}
+body.dark-theme .about-hero-bg h3 {
+    color: #ffffff !important; /* Makes 'WHY CHOOSE US' bright white */
+}
+
+/* Forces text color to stay bright white when on the dark background */
+body.dark-theme .about-hero-bg p,
+body.dark-theme .about-hero-bg li {
+    color: #ffffff !important; /* Bright text clarity */
+}
+
+/* ------------------------------------------------------------------------- */
+
+/* ☀️ Light Theme: Swaps the dark glass overlay for a clean, frosted window look */
+/* Clear any hidden background blocks on the inner columns in light mode */
+body.light-theme .about-hero-bg main,
+body.light-theme .about-hero-bg section {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+/* Change this: body.light-theme .about-hero-bg */
+/* To this: */
+.light-theme .about-hero-bg {
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), 
+                url('../images/inside_swanked.png') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.light-theme .about-hero-bg h2,
+.light-theme .about-hero-bg h3 {
+    color: #0052ff !important;
+}
+
+.light-theme .about-hero-bg p,
+.light-theme .about-hero-bg li {
+    color: #111111 !important;
+}
 
 /* Kept your exact body variables but shifted width rules to the column parent */
 .about-body {
