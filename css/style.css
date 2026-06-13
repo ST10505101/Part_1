@@ -127,23 +127,52 @@ header {
     from { transform: translateX(100%); }
     to { transform: translateX(-100%); }
 }
+
+/* This turns your container into a flex wrapper to put them side-by-side */
 .about-container {
-    padding: 20px;
-    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px; /* Clean column spacing gap between the blocks */
+    padding: 60px 4%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the layout on wide desktop viewports */
+    box-sizing: border-box;
 }
 
+/* Forces both the brand story section and why choose us section to share space evenly (50/50 split) */
+.about-column {
+    flex: 1;
+}
+
+/* Kept your exact text sizes and spacing while adding the accent color */
 .about-heading {
-    color: var(--accent-color); /* Uses your Electric/Orange accent */
+    color: var(--accent-color); /* Uses your Orange / Electric Blue accent */
     font-size: 2.5rem;
     letter-spacing: 2px;
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
+/* Kept your exact body variables but shifted width rules to the column parent */
 .about-body {
-    color: var(--text-color); /* Ensures visibility in all themes */
+    color: var(--text-color); /* Ensures visibility across all active themes */
     font-size: 1.1rem;
     line-height: 1.6;
-    max-width: 800px;
+}
+/* RESPONSIVE DESIGN: Safely folds the elements back into a clean stack on mobile */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Switches from side-by-side back to stacked layout safely */
+        gap: 40px;
+        padding: 40px 20px;
+    }
+}
+/* Style for the clean dash formatting in your HTML */
+.orange-dash {
+    color: var(--accent-color); /* Automatically matches your active toggle accent color */
+    margin-right: 8px;
+    font-weight: bold;
 }
 /* ==========================================================================
    HERO GRID LAYOUT

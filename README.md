@@ -157,6 +157,8 @@ The Journal page provides a space for community engagement, featuring:
   * Removed conflicting CSS to fix the broken white box, restored original absolute position coordinates, and made the header video stretch edge-to-edge.
 * **[2026-06-13 @ 19:48 SAST]** - `Add background video to homepage header section`
   * Wrapped the main navigation links and banner logo inside a showcase wrapper to play the store video directly in the header background.
+* **[2026-06-13 @ 20:45 SAST]** - `style: refactor about page layout to implement responsive side-by-side flex columns`
+  * Wrapped brand story and features checklist within a flexible container module to optimize horizontal space utilization based on feedback.
 ---
 ## 2026-05-29 @ 22:15 SAST-Testing & Debugging
 - **Device Cross-Compatibility**: Conducted responsive testing on desktop, tablet (iPad Pro), and mobile viewports using Chrome DevTools.
