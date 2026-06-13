@@ -5,26 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swanked</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="validation" href="js/validation.js">
 </head>
 <body>
-    <input type="checkbox" id="theme-toggle" class="toggle-checkbox">
+    <!-- Video Background Header Section -->
+    <div class="header-video-showcase">
+        
+        <!-- Background Video Element -->
+        <video autoplay loop muted playsinline class="header-bg-video">
+            <source src="images/ssstik.io_@swankedstore_1781372075083.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
 
-<label for="theme-toggle" class="toggle-label">
-    <span class="toggle-button-text">Switch Theme</span>
-</label>
-<header class="main-header">
-    <img src="Images/Swanked_banner.png" alt="Logo" width="200" height="200">
-    
-    <nav id="nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="Thearchive.html">The Archive</a></li>
-            <li><a href="Journal.html">Journal</a></li>
-            <li><a href="Aboutus.html">About Us</a></li>
-        </ul>
-    </nav>
-</header>
+        <!-- Dark Overlay to keep menu text highly readable -->
+        <div class="header-dark-overlay"></div>
+
+        <!-- Your exact theme toggle elements (Kept intact) -->
+        <input type="checkbox" id="theme-toggle" class="toggle-checkbox">
+        <label for="theme-toggle" class="toggle-label">
+            <span class="toggle-button-text">Switch Theme</span>
+        </label>
+
+        <!-- Your exact original header content (Kept intact) -->
+        <header class="main-header">
+            <img src="Images/Swanked_banner.png" alt="Logo" width="200" height="200">
+            
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="Thearchive.html">The Archive</a></li>
+                    <li><a href="Journal.html">Journal</a></li>
+                    <li><a href="Aboutus.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 
 <div class="marquee">
     <div class="marquee-content">
