@@ -153,6 +153,10 @@ The Journal page provides a space for community engagement, featuring:
 ## Homepage Dynamic Enhancements
 - **2026-05-29 @ 15:20 SAST-Scroll Marquee Implementation**: Added a high-impact, theme-aware CSS marquee to the home page for dynamic messaging.
 - **Animation Integration**: Utilized CSS keyframe animations to create a seamless, infinite scroll effect that remains consistent across all site themes.
+* **[2026-06-13 @ 20:15 SAST]** - `Fix theme switch button layout and background video spacing`
+  * Removed conflicting CSS to fix the broken white box, restored original absolute position coordinates, and made the header video stretch edge-to-edge.
+* **[2026-06-13 @ 19:48 SAST]** - `Add background video to homepage header section`
+  * Wrapped the main navigation links and banner logo inside a showcase wrapper to play the store video directly in the header background.
 ---
 ## 2026-05-29 @ 22:15 SAST-Testing & Debugging
 - **Device Cross-Compatibility**: Conducted responsive testing on desktop, tablet (iPad Pro), and mobile viewports using Chrome DevTools.
