@@ -98,7 +98,7 @@ The user interface is built around a heavy photographic film aesthetic featuring
 
  ## 📋Changelog
 
-### ✅ Finished (Part 2 Layout & CSS)
+### ✅ Finished (Part 2 Layout, CSS & worked on changes based on feedback from part 2)
 * **Widescreen Brand Identity:** Implemented a full-width, edge-to-edge responsive header banner optimized to scale dynamically across viewports.
 * **Component Encapsulation:** Refactored layout architecture using clean semantic groupings (`<header>`, `<section>`) bundled within container `<div>` elements for optimal Flexbox positioning.
 * **Pure CSS State Management:** Engineered a fully functional theme toggle utilizing the **CSS Checkbox Hack** (`:has()` and sibling combinator architecture) to manipulate custom variable properties at the `:root` level.
@@ -174,7 +174,21 @@ The Journal page provides a space for community engagement, featuring:
 * **Code Cleanup**: Resolved syntax irregularities and consolidated CSS selector blocks to ensure proper cascading.
 * **Theme Engine Optimization**: Finalized the `:root:has(.toggle-checkbox:checked)` logic, ensuring global theme variables propagate correctly across the entire layout.
 * **Structural Refinement**: Standardized header and container spacing to prevent layout "flickering" during theme transitions.
+### ✅ Finished (Part 3 js)
+## [1.0.0] - 2026-06-13 @ 23:33 SAST
+### Added
+- Theme Engine: "Nocturnal" (default) and "Negative" (light) modes.
+- Persistent state management using `localStorage` to remember theme choices.
+- Head-level script initialization to bootstrap theme state and minimize render flicker.
 
+### Changed
+- CSS: Migrated from hardcoded hex values to CSS variable-based theme engine.
+- Logic: Standardized all theme-related naming conventions to "negative" across CSS and JavaScript.
+- Validation: Cleaned up CSS syntax by removing redundant orphan brackets and streamlining variable scope.
+
+### Fixed
+- Resolved theme-switching conflict where the "Negative" state was not persisting across page navigation.
+- Optimized JavaScript execution order to improve theme rendering consistency.
 ---
 ## References
 (No date a) Swanked.  

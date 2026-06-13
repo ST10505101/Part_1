@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journal - Swanked</title>
+    <script>
+      if (localStorage.getItem('theme') === 'negative') {
+        document.documentElement.classList.add('negative');
+      }
+    </script>
         <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -103,5 +108,6 @@
  <footer> <hr>
    <p>Copyright 2024 Swanked. All rights reserved.</p>
 </footer>
+<script src="js/validation.js"></script>
 </body>
 </html>
