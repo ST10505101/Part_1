@@ -84,6 +84,9 @@ Make sure these files are included:
 
 ---
 
+## Sitemap
+![Swanked Website Sitemap](Documents/Swanked_Sitemap.png)
+
 ## 🎨 Design Philosophy & Architecture
 
 ### Theme Infrastructure
@@ -93,7 +96,7 @@ The user interface is built around a heavy photographic film aesthetic featuring
 
 ---
 
- ## 📋 Project Status & Progress Tracker
+ ## 📋Changelog
 
 ### ✅ Finished (Part 2 Layout & CSS)
 * **Widescreen Brand Identity:** Implemented a full-width, edge-to-edge responsive header banner optimized to scale dynamically across viewports.
@@ -123,9 +126,7 @@ The Journal page provides a space for community engagement, featuring:
 * **Multipage Synchronization:** Currently setting up structural container layouts and pasting core structural components across alternative project pages (`shop.html`, `Thearchive.html`, `Journal.html`, `Aboutus.html`).
 * **Asset Integration:** Exporting custom graphic layouts from Canva to serve as unified high-performance branding banners.
 
----
-
-### Latest Milestone Updates
+### 2026-05-28 @ 21:40 SAST-Latest Milestone Updates 
  * Transitioned to a 3-column responsive grid layout for all archive sections.
 - Implemented dedicated containers for each project drop to ensure visual separation.
 - Integrated high-energy event photography alongside the Spotify audio player for a unified brand experience.
@@ -133,8 +134,8 @@ The Journal page provides a space for community engagement, featuring:
 * **Synchronized HTML/CSS Architecture:** Cleaned up and refactored semantic element class bindings (`.section-title`) so the document markup perfectly connects with the stylesheet engine.
 * **Engineered Lemkus-Inspired Typography:** Built a premium, fluid hover-expansion typography layout that dynamically scales text and smoothly increases letter-spacing (`letter-spacing: 4px`).
 * **Synced Distributed Workspace:** Resolved local/remote repository divergence issues by safely rebasing the codebase (`git pull --rebase`) and locking local files into Git tracking configuration.
-* Implemented a CSS Grid layout for the Archive section to organize concept drops.
-* Integrated a curated Spotify "Soundscape" playlist to enhance brand atmosphere.
+* 2026-05-29 @ 09:30 SAST-Implemented a CSS Grid layout for the Archive section to organize concept drops.
+* 2026-05-29 @ 08:15 SAST-Integrated a curated Spotify "Soundscape" playlist to enhance brand atmosphere.
 * Fixed issues with the background of the contact form.
 ## About Us Page Refresh
 - **Layout Optimization**: Implemented a modern, responsive two-column split-layout for the "About Us" section, pairing brand narrative with immersive store imagery.
@@ -143,23 +144,65 @@ The Journal page provides a space for community engagement, featuring:
 - **Asset Integration**: Integrated `inside_swanked.png` to anchor the brand identity and provide visual context for the storefront experience.
 ## Bug Fix: Navigation Theme Visibility
 - **CSS Conflict Resolution**: Identified and resolved a specificity conflict between hard-coded color styles and theme-aware CSS variables.
-- **Dynamic Theme Implementation**: Updated the navigation CSS to utilize the `var(--text-color)` variable, ensuring the navigation text maintains high contrast against the background in both "Nocturnal" and "Electric" modes.
+- **2026-05-28 @ 17:30 SAST-Dynamic Theme Implementation**: Updated the navigation CSS to utilize the `var(--text-color)` variable, ensuring the navigation text maintains high contrast against the background in both "Nocturnal" and "Electric" modes.
 - **Consistency Optimization**: Standardized navigation link properties to ensure a uniform user experience
 ## Product Catalog Expansion
-- **Grid Layout Implementation**: Integrated a responsive CSS Grid system (`.product-grid`) to display 9 curated products, ensuring a clean, symmetrical layout across different screen sizes.
-- **Component Reusability**: Standardized the `product-card` HTML/CSS structure, enabling consistent styling for product meta-data and interactive elements like the "Add to Cart" button.
+- **2026-05-29 @ 18:05 SAST-Grid Layout Implementation**: Integrated a responsive CSS Grid system (`.product-grid`) to display 9 curated products, ensuring a clean, symmetrical layout across different screen sizes.
+- **2026-05-29 @ 15:20 SAST-Component Reusability**: Standardized the `product-card` HTML/CSS structure, enabling consistent styling for product meta-data and interactive elements like the "Add to Cart" button.
 - **Dynamic Alignment**: Utilized Flexbox within the product cards to align branding, pricing, and action buttons for a polished, professional storefront aesthetic.
 ## Homepage Dynamic Enhancements
-- **Scroll Marquee Implementation**: Added a high-impact, theme-aware CSS marquee to the home page for dynamic messaging.
+- **2026-05-29 @ 15:20 SAST-Scroll Marquee Implementation**: Added a high-impact, theme-aware CSS marquee to the home page for dynamic messaging.
 - **Animation Integration**: Utilized CSS keyframe animations to create a seamless, infinite scroll effect that remains consistent across all site themes.
 ---
-## Testing & Debugging
+## 2026-05-29 @ 22:15 SAST-Testing & Debugging
 - **Device Cross-Compatibility**: Conducted responsive testing on desktop, tablet (iPad Pro), and mobile viewports using Chrome DevTools.
-- **Hover Interaction Refinement**: Identified that `:hover` states were inconsistent on touch-based devices. Resolved this by refactoring CSS selectors to group `:hover`, `:active`, and `:focus` states, ensuring fluid visual feedback for mouse, touch, and keyboard navigation.
+- **2026-05-29 @ 10:15 SAST-Hover Interaction Refinement**: Identified that `:hover` states were inconsistent on touch-based devices. Resolved this by refactoring CSS selectors to group `:hover`, `:active`, and `:focus` states, ensuring fluid visual feedback for mouse, touch, and keyboard navigation.
 - **Mobile Layout Optimization**: Adjusted grid behaviour to a forced 2-column layout on mobile viewports using `grid-template-columns: repeat(2, 1fr)`, preventing vertical stacking and improving storefront density.
 - **Layout Integrity**: Verified that CSS Grid and Flexbox layouts maintained their structure during viewport resizing, ensuring a consistent user experience.
 
 ---
+## References
+(No date a) Swanked.  
+Available at:< https://swanked.co.za/> [Accessed: 09 April 2026].  
+(No date b) Pinterest. Available at: 
+<https://za.pinterest.com/search/pins/?q=industrial+spaces&rs=typed > [Accessed: 13 
+April 2026].  
+Admin ,2026. Website design costs in South Africa: Full pricing breakdown (2026), 
+Gridweb Web Design Cape Town, South Africa. Available at: 
+<https://gridweb.co.za/website-design-costs-south
+africa/#:~:text=Website%20Design%20Costs%20in%20South%20Africa:%20Complete
+%20Pricing%20Guide%20(2026,correctly%20and%20avoid%20hidden%20costs. > 
+[Accessed: 19 April 2026].  
+Chrome Hearts (no date) Chrome Hearts. Available at: 
+<https://www.chromehearts.com/ > [Accessed: 10 April 2026].  
+Hassabis, D. (2023) Google Gemini, Google. Available at: 
+<https://gemini.google.com/app/c8aae4df88fde7c4?utm_source=app_launcher&utm_
+medium=owned&utm_campaign=base_all  > [Accessed: 19 April 2026].  
+Mayor, E. (2025) Real website costs in South Africa across 7 types compared, Pretoria 
+Web Design for Proven Leads and Faster Sales Growth. Available at: 
+<https://swervedesigns.co.za/real-website-costs-in-south-africa-across-types
+compared/#:~:text=Compare%20website%20costs%20across%207,from%20R99%2D
+R799%20excluding%20VAT. >. [Accessed: 19 April 2026].  
+Moyo, B. (2026) Website maintenance costs in South Africa, Symaxx Digital. Available 
+at: < https://symaxx.com/blog/website-maintenance-costs-in-south-africa > 
+[Accessed: 19 April 2026]. 
+OAicial site (no date) NOCTA. Available at: < https://www.nocta.com/en
+za?srsltid=AfmBOop1G7C3RFEwlHkuMBDxCEoIiAsjaqgdlRpvkdcuIRZaGDVW9CoV >[Accessed: 09 April 2026].  
+Pin On Design inspi (2025) Pinterest. Available at: 
+<https://za.pinterest.com/pin/9640586698229822/  > [Accessed: 10 April 2026].  
+Understanding the costs of domain registration and hosting in South Africa ,2025. News, 
+Tips and Tricks - Register Domain SA, [blog]. Available at:  
+<https://www.registerdomain.co.za/blog/domain-hosting-costs-south
+africa/#:~:text=What%20does%20web%20hosting%20cost,simple%20site%20quickly
+%20without%20coding.  > [Accessed: 19 April 2026].  
+Pin On Fashion Website, 2026.Pinterest. Available at: 
+<https://za.pinterest.com/pin/4925880839247944/ >[Accessed: 10 April 2026].  
+Pin on RCA,2026. Pinterest. Available at:  
+<https://za.pinterest.com/pin/16677461116591430/ >[Accessed: 10 April 2026].  
+Pin on website design (2025) Pinterest. Available at: 
+<https://za.pinterest.com/pin/1688918606868899/ > [Accessed: 10 April 2026].  
+Zonefour (no date) ZONEFOUR. Available at:< https://zonefourclo.com/ > [Accessed: 10 
+April 2026]. 
 
 ## 👤 Author
 **Ammaarah Mostert**  
