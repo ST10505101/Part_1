@@ -28,7 +28,7 @@ function validateForm() {
     const age= document.getElementById("age").value;
     const errorMsg = document.getElementById("errorMsg");
 
-    errorMsg.innerHTML = ""; // Clear previous error messages
+    errorMsg.textContent = ""; // Clear previous error messages
     if (name.trim() === "") {
         errorMsg.textContent += "Please enter your name";
         return false;
@@ -50,3 +50,83 @@ function validateForm() {
     alert("Form submitted successfully!");
     return true;
 }   
+
+/* =========================================================================
+   Search and Gallery Validation
+   ========================================================================== */
+const products = [
+    { name: "New Era Cap", category: "Headwear", price: "R699", brand: "Headwear Core", image: "Images/newera_cap.jpg" },
+    { name: "Nike Air Force 1 Type 2", category: "Footwear", price: "R3,499", brand: "Footwear Tier", image: "Images/Nike_Air.Force 1_type 2.jpg" },
+    { name: "Stussy", category: "Clothing", price: "R2,299", brand: "Clothing", image: "Images/Stussy.jpg" },
+    { name: "Vanquish T-Shirt", category: "Clothing", price: "R499", brand: "Swanked Apparel", image: "Images/vanquish_tee.jpg" },
+    { name: "Vanquish Hoodie", category: "Clothing", price: "R899", brand: "Swanked Apparel", image: "Images/vanquish_hoodie.jpg" },
+    { name: "Nike x NOCTA T-Shirt", category: "Clothing", price: "R1,998", brand: "Clothing", image: "Images/Nike x NOCTA T-Shirt.jpg" },
+    { name: "Nike tech fleece", category: "Clothing", price: "R2,399.95", brand: "Clothing", image: "Images/Nike tech fleece.jpg" },
+    { name: "Supreme camo hoodie", category: "Clothing", price: "R7,999", brand: "Clothing", image: "Images/Supreme camo hoodie.jpg" },
+    { name: "Nike Dunks", category: "Footwear", price: "R1,299", brand: "Footwear Tier", image: "Images/nike_dunks.jpg" }
+];
+
+// 2. The Render Function (Your logic is perfect here)
+function renderGallery(productList) {
+    const gallery = document.getElementById('gallery');
+    gallery.innerHTML = ""; 
+
+    productList.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'product-card';
+        
+       item.innerHTML = `
+    <div class="product-image-wrapper">
+        <img src="${p.image}" alt="${p.name}" class="clickable-image" style="cursor: pointer;">
+    </div>
+    <div class="product-info">
+        <div class="product-text-meta">
+            <span class="product-brand">${p.category}</span>
+            <h3 class="product-title">${p.name}</h3>
+            <span class="product-price">${p.price}</span>
+        </div>
+        <button class="add-to-cart-btn" aria-label="Add to cart">
+            <div class="cart-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+            </div>
+        </button>
+    </div>
+`;
+const cartBtn = item.querySelector('.add-to-cart-btn');
+cartBtn.addEventListener('click', () => {
+    addToCart(p); // This calls the function we will create next
+});
+
+        const img = item.querySelector('.clickable-image');
+        img.addEventListener('click', () => {
+            window.open(p.image, '_blank');
+        });
+
+        gallery.appendChild(item);
+    });
+}
+
+// 3. The Search Function
+function filterProducts() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const filtered = products.filter(p => 
+        p.name.toLowerCase().includes(input) || 
+        p.category.toLowerCase().includes(input)
+    );
+    renderGallery(filtered);
+}
+// A simple cart array to hold items
+let cart = [];
+
+function addToCart(product) {
+    cart.push(product);
+    alert(product.name + " has been added to your cart!");
+    console.log("Current Cart:", cart);
+}
+// 4. THE MOST IMPORTANT PART:
+// This line triggers the gallery to load the first time the page opens
+renderGallery(products);

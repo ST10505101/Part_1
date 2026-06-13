@@ -183,18 +183,29 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-13 @ 11:47 SAST] Form Validation: Implemented `validateForm()` function to handle name, email (Regex), and age range checks.
 - [2026-06-13 @ 11:47 SAST] Security: Integrated `.textContent` for error message injection to prevent potential XSS vulnerabilities.
 -[2026-06-13 @ 11:47 SAST]  User Feedback: Added dedicated `<p id="errorMsg" class="error"></p>` container to provide real-time validation feedback.
+- [2026-06-14 @ 1:20 SAST] **Dynamic Rendering**: Implemented `renderGallery` to generate product cards directly from a central `products` data array.
+-[2026-06-14 @ 1:20 SAST] **Search Functionality**: Created `filterProducts` for real-time, case-insensitive searching of product names and categories.
+-[2026-06-14 @ 1:20 SAST] **Image Interactivity**: Added `window.open` event listeners to product images, enabling "open in new tab" functionality upon click.
+- [2026-06-14 @ 1:20 SAST] **UI Integration**: Added dynamic "Add to Cart" button generation and cart-counter preparation within the gallery template.
 
 ### Changed
 - CSS: Migrated from hardcoded hex values to CSS variable-based theme engine.
 - Logic: Standardized all theme-related naming conventions to "negative" across CSS and JavaScript.
 - Validation: Cleaned up CSS syntax by removing redundant orphan brackets and streamlining variable scope.
 -[2026-06-13 @ 11:47 SAST] Refactored JS: Updated all error injection methods from `.innerHTML` to `.textContent` for improved performance and security.
--[2026-06-13 @ 11:47 SAST]  CSS Styling: Added `.error` class to ensure validation messages maintain consistent branding across "Nocturnal" and "Negative" themes.
+-[2026-06-13 @ 11:47 SAST] CSS Styling: Added `.error` class to ensure validation messages maintain consistent branding across "Nocturnal" and "Negative" themes.
+- [2026-06-14 @ 1:20 SAST] **Rendering Conflict**: Resolved conflicts caused by duplicate hard-coded HTML by moving to a 100% data-driven generation approach.
+- [2026-06-14 @ 1:20 SAST] **Initialization**: Added automatic function execution on page load to ensure the gallery populates immediately.
+-[2026-06-14 @ 1:20 SAST]  **Data Persistence**: Integrated `JSON.parse` and `JSON.stringify` to maintain cart state across multiple browser pages.
 
 ### Fixed
 - Resolved theme-switching conflict where the "Negative" state was not persisting across page navigation.
 - Optimized JavaScript execution order to improve theme rendering consistency.
 -[2026-06-13 @ 11:47 SAST] Resolved minor layout shifting by applying `min-height` to the error message container.
+
+### Security & Optimization [2026-06-14 @ 1:20 SAST]
+- **Code Consolidation**: Merged redundant display logic into a single source of truth (`renderGallery`).
+- **Scalability**: Designed the codebase to support future product additions simply by updating the `products` array.
 ---
 ## References
 (No date a) Swanked.  
