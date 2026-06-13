@@ -169,6 +169,11 @@ The Journal page provides a space for community engagement, featuring:
 - **2026-05-29 @ 10:15 SAST-Hover Interaction Refinement**: Identified that `:hover` states were inconsistent on touch-based devices. Resolved this by refactoring CSS selectors to group `:hover`, `:active`, and `:focus` states, ensuring fluid visual feedback for mouse, touch, and keyboard navigation.
 - **Mobile Layout Optimization**: Adjusted grid behaviour to a forced 2-column layout on mobile viewports using `grid-template-columns: repeat(2, 1fr)`, preventing vertical stacking and improving storefront density.
 - **Layout Integrity**: Verified that CSS Grid and Flexbox layouts maintained their structure during viewport resizing, ensuring a consistent user experience.
+#### Fixed ([v1.0.1] - 2026-06-13 @ 21:48 SAST)
+* **CSS Conflict Resolution**: Removed duplicate `.about-hero-bg` definitions that were causing inconsistent theme application.
+* **Code Cleanup**: Resolved syntax irregularities and consolidated CSS selector blocks to ensure proper cascading.
+* **Theme Engine Optimization**: Finalized the `:root:has(.toggle-checkbox:checked)` logic, ensuring global theme variables propagate correctly across the entire layout.
+* **Structural Refinement**: Standardized header and container spacing to prevent layout "flickering" during theme transitions.
 
 ---
 ## References
