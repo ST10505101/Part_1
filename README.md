@@ -180,15 +180,21 @@ The Journal page provides a space for community engagement, featuring:
 - Theme Engine: "Nocturnal" (default) and "Negative" (light) modes.
 - Persistent state management using `localStorage` to remember theme choices.
 - Head-level script initialization to bootstrap theme state and minimize render flicker.
+- [2026-06-13 @ 11:47 SAST] Form Validation: Implemented `validateForm()` function to handle name, email (Regex), and age range checks.
+- [2026-06-13 @ 11:47 SAST] Security: Integrated `.textContent` for error message injection to prevent potential XSS vulnerabilities.
+-[2026-06-13 @ 11:47 SAST]  User Feedback: Added dedicated `<p id="errorMsg" class="error"></p>` container to provide real-time validation feedback.
 
 ### Changed
 - CSS: Migrated from hardcoded hex values to CSS variable-based theme engine.
 - Logic: Standardized all theme-related naming conventions to "negative" across CSS and JavaScript.
 - Validation: Cleaned up CSS syntax by removing redundant orphan brackets and streamlining variable scope.
+-[2026-06-13 @ 11:47 SAST] Refactored JS: Updated all error injection methods from `.innerHTML` to `.textContent` for improved performance and security.
+-[2026-06-13 @ 11:47 SAST]  CSS Styling: Added `.error` class to ensure validation messages maintain consistent branding across "Nocturnal" and "Negative" themes.
 
 ### Fixed
 - Resolved theme-switching conflict where the "Negative" state was not persisting across page navigation.
 - Optimized JavaScript execution order to improve theme rendering consistency.
+-[2026-06-13 @ 11:47 SAST] Resolved minor layout shifting by applying `min-height` to the error message container.
 ---
 ## References
 (No date a) Swanked.  

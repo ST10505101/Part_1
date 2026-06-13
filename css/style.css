@@ -32,7 +32,12 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1.6;
 }
-
+.error {
+    color: #ff4500; /* Maintains your Nocturnal/Negative branding */
+    font-size: 0.9rem;
+    min-height: 1.2rem; /* Reserves space so the form doesn't 'jump' when text appears */
+    margin-top: 5px;
+}
 /*Hidden checkbox and toggle styling*/
 /*hide the default browser checkbox*/
 .toggle-checkbox {
