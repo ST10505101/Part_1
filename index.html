@@ -8,40 +8,49 @@
     <link rel="validation" href="js/validation.js">
 </head>
 <body>
-    <!-- Video Background Header Section -->
+
+    <!-- Fixed Video Background Header Container -->
     <div class="header-video-showcase">
         
-        <!-- Background Video Element -->
+        <!-- Background Video (Now configured to fill the entire horizontal section) -->
         <video autoplay loop muted playsinline class="header-bg-video">
             <source src="images/ssstik.io_@swankedstore_1781372075083.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
-        <!-- Dark Overlay to keep menu text highly readable -->
+        <!-- Subtle tint overlay so text and logo remain visible over video motion -->
         <div class="header-dark-overlay"></div>
 
-        <!-- Your exact theme toggle elements (Kept intact) -->
-        <input type="checkbox" id="theme-toggle" class="toggle-checkbox">
-        <label for="theme-toggle" class="toggle-label">
-            <span class="toggle-button-text">Switch Theme</span>
-        </label>
-
-        <!-- Your exact original header content (Kept intact) -->
+        <!-- Clean, aligned header core -->
         <header class="main-header">
-            <img src="Images/Swanked_banner.png" alt="Logo" width="200" height="200">
             
-            <nav id="nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="Thearchive.html">The Archive</a></li>
-                    <li><a href="Journal.html">Journal</a></li>
-                    <li><a href="Aboutus.html">About Us</a></li>
-                </ul>
-            </nav>
+            <div class="logo-area">
+                <img src="Images/Swanked_banner.png" alt="Logo" width="200" height="200">
+            </div>
+
+            <div class="nav-and-toggle-area">
+                <!-- Theme toggle button wrapped nicely to sit in the top right -->
+                <div class="toggle-container">
+                    <input type="checkbox" id="theme-toggle" class="toggle-checkbox">
+                    <label for="theme-toggle" class="toggle-label">
+                        <span class="toggle-button-text">SWITCH THEME</span>
+                    </label>
+                </div>
+
+                <!-- Navigation links below the toggle -->
+                <nav id="nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="Thearchive.html">The Archive</a></li>
+                        <li><a href="Journal.html">Journal</a></li>
+                        <li><a href="Aboutus.html">About Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+
         </header>
     </div>
-
 <div class="marquee">
     <div class="marquee-content">
         <span>🔥NEW DROPS EVERY FRIDAY • AUTHENTIC SNEAKERS • LOCAL STREETWEAR • JOIN THE CULTURE🔥</span>

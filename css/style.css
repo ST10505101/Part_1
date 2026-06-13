@@ -742,69 +742,65 @@ input[type="submit"] {
     color: var(--accent-color); 
 }
 
-/* ==========================================
-   VIDEO BACKGROUND HEADER STYLES
-   ========================================== */
+/* =========================================================================
+   SWANKED VIDEO BACKGROUND HEADER
+   ========================================================================== */
 
-/* 1. Master container that holds the header block area */
+/* Master header block container - spans edge-to-edge horizontally */
 .header-video-showcase {
     position: relative;
     width: 100%;
-    min-height: 220px; /* Gives plenty of breathing room for your 200px tall logo */
+    min-height: 220px;
     background-color: #000000;
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-/* 2. Absolute positions the portrait video background safely inside the section */
+/* FIXES THE BLACK BOX HOLES: Forces video to occupy the entire header background space */
 .header-bg-video {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%;
-    max-width: 450px; /* Clamps the portrait short video so it stays in shape on desktop monitors */
+    width: 100%; /* Spreads edge-to-edge across the entire screen */
     height: 100%;
-    object-fit: cover;
-    z-index: 1; /* Lowest layer */
+    object-fit: cover; /* Crops the video dynamically to fill the space without leaving black gaps */
+    z-index: 1;
 }
 
-/* 3. Dark overlay ensures your orange graffiti logo and navigation links pop clearly */
+/* See-through tint layer over the video screen for legibility */
 .header-dark-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* 60% black tint layer for contrast */
-    z-index: 2; /* Sits right over the video stream */
+    background: rgba(0, 0, 0, 0.45); /* Soft background mask overlay */
+    z-index: 2;
 }
 
-/* 4. Forces your existing header, inputs, and text to layer over the video */
-.main-header, 
-.toggle-checkbox, 
-.toggle-label {
-    position: relative !important;
-    z-index: 3 !important; /* Highest layer, sitting above the dark overlay */
-}
-
-/* 5. Aligns your logo and navigation bar exactly like the screenshot */
+/* Layering your core nav and logo elements neatly above the background tracks */
 .main-header {
+    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    padding: 20px 40px;
     box-sizing: border-box;
+    min-height: 220px; /* Aligns container height with your showcase block */
+}
+
+/* Navigation lists layout settings - fits neatly right under where your absolute button floats */
+#nav {
+    margin-top: auto; /* Pushes the nav menu down slightly so it doesn't overlap the absolute button space */
 }
 
 #nav ul {
     display: flex;
     list-style: none;
-    gap: 25px; /* Adds space between your navigation text links */
     margin: 0;
     padding: 0;
+    gap: 25px;
 }
 
 #nav ul li a {
@@ -812,10 +808,5 @@ input[type="submit"] {
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-/* Optional hover effect to look extra professional for the lecturer */
-#nav ul li a:hover {
-    color: #FF4500; /* Changes to your brand accent color on hover */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Ensures links are legible over shifting video frames */
 }
