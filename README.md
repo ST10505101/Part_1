@@ -167,27 +167,12 @@ Available at:< https://swanked.co.za/> [Accessed: 09 April 2026].
 (No date b) Pinterest. Available at: 
 <https://za.pinterest.com/search/pins/?q=industrial+spaces&rs=typed > [Accessed: 13 
 April 2026].  
-Admin ,2026. Website design costs in South Africa: Full pricing breakdown (2026), 
-Gridweb Web Design Cape Town, South Africa. Available at: 
-<https://gridweb.co.za/website-design-costs-south
-africa/#:~:text=Website%20Design%20Costs%20in%20South%20Africa:%20Complete
-%20Pricing%20Guide%20(2026,correctly%20and%20avoid%20hidden%20costs. > 
-[Accessed: 19 April 2026].  
-Chrome Hearts (no date) Chrome Hearts. Available at: 
-<https://www.chromehearts.com/ > [Accessed: 10 April 2026].  
-Hassabis, D. (2023) Google Gemini, Google. Available at: 
-<https://gemini.google.com/app/c8aae4df88fde7c4?utm_source=app_launcher&utm_
-medium=owned&utm_campaign=base_all  > [Accessed: 19 April 2026].  
-Mayor, E. (2025) Real website costs in South Africa across 7 types compared, Pretoria 
-Web Design for Proven Leads and Faster Sales Growth. Available at: 
-<https://swervedesigns.co.za/real-website-costs-in-south-africa-across-types
-compared/#:~:text=Compare%20website%20costs%20across%207,from%20R99%2D
-R799%20excluding%20VAT. >. [Accessed: 19 April 2026].  
-Moyo, B. (2026) Website maintenance costs in South Africa, Symaxx Digital. Available 
-at: < https://symaxx.com/blog/website-maintenance-costs-in-south-africa > 
-[Accessed: 19 April 2026]. 
-OAicial site (no date) NOCTA. Available at: < https://www.nocta.com/en
-za?srsltid=AfmBOop1G7C3RFEwlHkuMBDxCEoIiAsjaqgdlRpvkdcuIRZaGDVW9CoV >[Accessed: 09 April 2026].  
+Admin. (2026). *Website design costs in South Africa: Full pricing breakdown (2026)*. Gridweb Web Design Cape Town, South Africa. Available at: https://gridweb.co.za/website-design-costs-south-africa/ [Accessed: 19 April 2026].  
+Chrome Hearts. (nd). *Chrome Hearts Official Store*. Available at: https://www.chromehearts.com/ [Accessed: 10 April 2026].  
+Hassabis, D. (2023). *Google Gemini*. Google. Available at: https://gemini.google.com/ [Accessed: 19 April 2026].
+Mayor, E. (2025). *Real website costs in South Africa across 7 types compared*. Pretoria Web Design for Proven Leads and Faster Sales Growth. Available at: https://swervedesigns.co.za/real-website-costs-in-south-africa-across-types-compared/ [Accessed: 19 April 2026].  
+Moyo, B. (2026). *Website maintenance costs in South Africa*. Symaxx Digital. Available at: https://symaxx.com/blog/website-maintenance-costs-in-south-africa [Accessed: 19 April 2026].
+NOCTA. (nd). *Official NOCTA Site*. Available at: https://www.nocta.com/en-za [Accessed: 09 April 2026].
 Pin On Design inspi (2025) Pinterest. Available at: 
 <https://za.pinterest.com/pin/9640586698229822/  > [Accessed: 10 April 2026].  
 Understanding the costs of domain registration and hosting in South Africa ,2025. News, 
