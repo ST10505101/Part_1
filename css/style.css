@@ -81,33 +81,33 @@ header {
     padding: 20px;
 }
 /* Nav Link Styling */
-.nav-links a {
-    color: var(--text-color); /* This variable ensures contrast against your background */
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-    border-bottom: 2px solid transparent; 
-}
+/* =========================================================================
+   CLEAN UNIFIED NAVIGATION CODES
+   ========================================================================== */
 
-/* Hover Effect for visual feedback */
-.nav-links a:hover {
-    color: var(--accent-color); /* Switches to your accent color on hover */
-    border-bottom: 2px solid var(--accent-color); 
-}
 #nav ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
     gap: 20px; /* Puts space between links */
 }
 
-#nav a {
-    /* REMOVE THIS: color: white; */
-    /* Use the variable instead so it switches based on the theme */
-    color: var(--text-color); 
+#nav ul li a {
+    color: var(--text-color); /* Contrast variable that changes with theme */
     text-decoration: none;
-    font-size: 18px;
-    /* Keeping your other properties */
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block; /* Crucial for hover lines and vertical layout math */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Readability shield over background images/videos */
+    border-bottom: 2px solid transparent; 
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+#nav ul li a:hover {
+    color: var(--accent-color); /* Switches to your signature active color */
+    border-bottom: 2px solid var(--accent-color);
 }
 .marquee {
     width: 100%;
@@ -235,7 +235,12 @@ body {
     padding: 60px 4%;
     text-align: left;
 }
-
+hr {
+    border: none;
+    height: 2px;
+    background-color: #333; /* Changes the line color */
+    width: 100%;            /* Changes the line width */
+  }
 .main-heading {
     font-size: 3.5rem;
     font-weight: 900;
@@ -819,23 +824,3 @@ input[type="submit"] {
     min-height: 220px; /* Aligns container height with your showcase block */
 }
 
-/* Navigation lists layout settings - fits neatly right under where your absolute button floats */
-#nav {
-    margin-top: auto; /* Pushes the nav menu down slightly so it doesn't overlap the absolute button space */
-}
-
-#nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 25px;
-}
-
-#nav ul li a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Ensures links are legible over shifting video frames */
-}

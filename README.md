@@ -127,6 +127,9 @@ The Journal page provides a space for community engagement, featuring:
 * **Asset Integration:** Exporting custom graphic layouts from Canva to serve as unified high-performance branding banners.
 
 ### 2026-05-28 @ 21:40 SAST-Latest Milestone Updates 
+*  **[2026-06-13 @ 21:35 SAST]**- Added a divider line across all pages on the website
+* **[2026-06-13 @ 21:35 SAST]** - `style: clean up redundant cascade definitions and consolidate navigation selectors`
+  * Deleted duplicated navbar rule block around line 827 to resolve CSS specificity conflicts and ensure correct link color inheritance.
  * Transitioned to a 3-column responsive grid layout for all archive sections.
 - Implemented dedicated containers for each project drop to ensure visual separation.
 - Integrated high-energy event photography alongside the Spotify audio player for a unified brand experience.
