@@ -741,3 +741,81 @@ input[type="submit"] {
     /* Optional: change color to show it's active */
     color: var(--accent-color); 
 }
+
+/* ==========================================
+   VIDEO BACKGROUND HEADER STYLES
+   ========================================== */
+
+/* 1. Master container that holds the header block area */
+.header-video-showcase {
+    position: relative;
+    width: 100%;
+    min-height: 220px; /* Gives plenty of breathing room for your 200px tall logo */
+    background-color: #000000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* 2. Absolute positions the portrait video background safely inside the section */
+.header-bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 450px; /* Clamps the portrait short video so it stays in shape on desktop monitors */
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Lowest layer */
+}
+
+/* 3. Dark overlay ensures your orange graffiti logo and navigation links pop clearly */
+.header-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* 60% black tint layer for contrast */
+    z-index: 2; /* Sits right over the video stream */
+}
+
+/* 4. Forces your existing header, inputs, and text to layer over the video */
+.main-header, 
+.toggle-checkbox, 
+.toggle-label {
+    position: relative !important;
+    z-index: 3 !important; /* Highest layer, sitting above the dark overlay */
+}
+
+/* 5. Aligns your logo and navigation bar exactly like the screenshot */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    box-sizing: border-box;
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px; /* Adds space between your navigation text links */
+    margin: 0;
+    padding: 0;
+}
+
+#nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Optional hover effect to look extra professional for the lecturer */
+#nav ul li a:hover {
+    color: #FF4500; /* Changes to your brand accent color on hover */
+}
