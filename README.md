@@ -195,6 +195,9 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-14 @ 19:35 SAST] AJAX Form Submission: Implemented fetch() API in validation.js to handle contact form submissions asynchronously, preventing full-page reloads.
 - [2026-06-14 @ 19:35 SAST] Dynamic Success Feedback: Replaced standard alerts with in-page DOM injection to display "Message Sent" confirmations.
 - [2026-06-14 @ 19:35 SAST] Asynchronous Validation: Integrated live form validation that runs before the background request, providing immediate user feedback.
+- [2026-06-14 @ 20:25 SAST] SEO Metadata: Implemented unique <meta> descriptions, keywords, and <title> tags for all pages (Home, Shop, Journal, Archive, About Us).
+- [2026-06-14 @ 20:25 SAST] Open Graph Support: Added og:title, og:description, and og:url tags to ensure professional link previews on social media.
+- [2026-06-14 @ 20:25 SAST] Mobile Optimization: Standardized viewport meta tags across the entire site to ensure responsive rendering on mobile devices.
 
 
 
