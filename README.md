@@ -192,6 +192,9 @@ The Journal page provides a space for community engagement, featuring:
 -[2026-06-14 @ 18:50 SAST] Lightbox Feature: Implemented a custom lightbox overlay for product images in shop.html to improve user experience and image viewing
 - [2026-06-14 @ 18:50 SAST] Dynamic Glow Effects: Added interactive box-shadow glow effects to the lightbox, which update dynamically based on the active theme (Blue/Orange).
 - [2026-06-14 @ 18:50 SAST] CSS Transitions: Implemented smooth transition properties for border-color and box-shadow shifts during theme switching.
+- [2026-06-14 @ 19:35 SAST] AJAX Form Submission: Implemented fetch() API in validation.js to handle contact form submissions asynchronously, preventing full-page reloads.
+- [2026-06-14 @ 19:35 SAST] Dynamic Success Feedback: Replaced standard alerts with in-page DOM injection to display "Message Sent" confirmations.
+- [2026-06-14 @ 19:35 SAST] Asynchronous Validation: Integrated live form validation that runs before the background request, providing immediate user feedback.
 
 
 
@@ -204,6 +207,9 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-14 @ 01:20 SAST] **Rendering Conflict**: Resolved conflicts caused by duplicate hard-coded HTML by moving to a 100% data-driven generation approach.
 - [2026-06-14 @ 01:20 SAST] **Initialization**: Added automatic function execution on page load to ensure the gallery populates immediately.
 - [2026-06-14 @ 01:20 SAST]  **Data Persistence**: Integrated `JSON.parse` and `JSON.stringify` to maintain cart state across multiple browser pages. 
+- [2026-06-14 @ 19:35 SAST] Refactored Contact Form: Removed legacy onsubmit attributes and hardcoded actions to favor modern, event-driven JavaScript listeners.
+- [2026-06-14 @ 19:35 SAST] Code Cleanup: Removed redundant age input fields and validation logic, streamlining the contact.html structure.
+- [2026-06-14 @ 19:35 SAST]UX Improvements: Implemented dynamic data capture to ensure form inputs are processed and ready for asynchronous transmission.
 
 
 ### Fixed

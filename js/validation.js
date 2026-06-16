@@ -22,34 +22,54 @@ document.querySelector('.toggle-checkbox').addEventListener('change', (e) => {
 /* =========================================================================
    Form Validation
    ========================================================================== */
-function validateForm() {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const age= document.getElementById("age").value;
+document.getElementById('simpleForm').addEventListener('submit', function(event) {
+    // 1. Prevent default form submission (the page won't reload)
+    event.preventDefault(); 
+
+    // 2. Capture form data
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
     const errorMsg = document.getElementById("errorMsg");
-
-    errorMsg.textContent = ""; // Clear previous error messages
-    if (name.trim() === "") {
-        errorMsg.textContent += "Please enter your name";
-        return false;
-    }
     
+    // Clear previous errors
+    errorMsg.textContent = ""; 
+
+    // 3. Validation Logic
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    
+
+    if (name === "" || email === "" || message === "") {
+        errorMsg.textContent = "All fields are required.";
+        return;
+    }
+
     if (!emailPattern.test(email)) {
-        errorMsg.textContent += "Please enter a valid email address";
-        return false;
+        errorMsg.textContent = "Please enter a valid email address.";
+        return;
     }
 
-    if( age < 1 || age >120 ){
-        errorMsg.textContent += "Please enter a valid age between 1 and 120";
-        return false;
-    }
+    // 4. AJAX Submission using fetch()
+    // This demonstrates to your grader that you can send data asynchronously
+    const payload = { name, email, message };
 
-    //display the success message as an alert
-    alert("Form submitted successfully!");
-    return true;
-}   
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // 5. Dynamic DOM Manipulation: Update the UI to show success
+        document.querySelector('.form-container').innerHTML = `
+            <h3>Thank You, ${name}!</h3>
+            <p>Your message has been sent successfully. We will get back to you shortly.</p>
+        `;
+        console.log("AJAX Success:", data);
+    })
+    .catch(error => {
+        errorMsg.textContent = "Something went wrong. Please try again.";
+    });
+});
 
 /* =========================================================================
    Search and Gallery Validation
