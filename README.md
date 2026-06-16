@@ -226,6 +226,9 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-16 @ 17:48 SAST] Browser Security: Addressed file:/// origin issues by moving to a local development server workflow for map rendering.
 - [2026-06-14 @ 18:50 SAST] Navigation UI: Removed forced window.open behavior in favor of the new modal-based Lightbox to prevent unwanted browser tab clutter.
 - [2026-06-14 @ 18:50 SAST]Component Styling: Replaced hardcoded CSS colors with theme-aware selectors to ensure consistency with the user’s selected site theme.
+- [2026-06-16 @ 22:36 SAST] Shop: added a guard clause in validation.js after the shop paged crashed after it was deployed
+- [2026-06-16 @ 22:46 SAST] Resolved the black flash that kept happening as soon as the theme was applied
+ 
 
  
 ### Security & Optimization [2026-06-14 @ 1:20 SAST]
