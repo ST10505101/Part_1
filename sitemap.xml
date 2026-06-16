@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://YOUR-SITE-URL.netlify.app/index.html</loc>
+<loc>https://swanked.netlify.app/index.html</loc>
 </url>
 <url>
-<loc>https://YOUR-SITE-URL.netlify.app/shop.html</loc>
+<loc>https://swanked.netlify.app/shop.html</loc>
 </url>
 <url>
-<loc>https://YOUR-SITE-URL.netlify.app/journal.html</loc>
+<loc>https://swanked.netlify.app/journal.html</loc>
 </url>
 <url>
-<loc>https://YOUR-SITE-URL.netlify.app/archive.html</loc>
+<loc>https://swanked.netlify.app/thearchive.html</loc>
 </url>
 <url>
-<loc>https://YOUR-SITE-URL.netlify.app/about.html</loc>
-</url>
-<url>
-<loc>https://YOUR-SITE-URL.netlify.app/contact.html</loc>
+<loc>https://swanked.netlify.app/aboutus.html</loc>
 </url>
 </urlset>
