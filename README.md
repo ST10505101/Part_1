@@ -10,6 +10,8 @@ The website translates a design proposal into a functional HTML-based site that 
 ## Part 1 Details
 This submission covers the initial structural layout, semantic HTML implementation, and core styling of the Swanked website project. Future iterations (Part 2 and Part 3) have built upon this foundation to include advanced interactivity, API integration, and SEO optimization.
 
+---
+
 ## 🎯 Objectives
 - Create a structured multi-page website  
 - Improve navigation and usability  
@@ -107,6 +109,8 @@ The user interface is built around a heavy photographic film aesthetic featuring
 - Typography: Replaced browser default styles with high-contrast, streetwear-inspired editorial layouts, including fluid hover-expansion effects and adjusted letter-spacing.  
 - Component Development: Established a standardized product-card structure to ensure consistency across the storefront, using CSS Grid for the product catalog display. 
 
+---
+
 ### ✅ Finished (Part 2 Layout, CSS & worked on changes based on feedback from part 2)
 * **Widescreen Brand Identity:** Implemented a full-width, edge-to-edge responsive header banner optimized to scale dynamically across viewports.
 * **Component Encapsulation:** Refactored layout architecture using clean semantic groupings (`<header>`, `<section>`) bundled within container `<div>` elements for optimal Flexbox positioning.
@@ -184,7 +188,7 @@ The Journal page provides a space for community engagement, featuring:
 * **Code Cleanup**: Resolved syntax irregularities and consolidated CSS selector blocks to ensure proper cascading.
 * **Theme Engine Optimization**: Finalized the `:root:has(.toggle-checkbox:checked)` logic, ensuring global theme variables propagate correctly across the entire layout.
 * **Structural Refinement**: Standardized header and container spacing to prevent layout "flickering" during theme transitions.
-
+---
 ### Part 3 Details
 - Dynamic Theme Engine: Implemented a persistent "Nocturnal" (default) and "Negative" (light) mode switcher using localStorage to ensure the user's preference is remembered across page navigations.  
 - Form Validation & Security: Developed a validateForm() function with Regex checks and implemented textContent injection to prevent Cross-Site Scripting (XSS) vulnerabilities.  
@@ -192,6 +196,8 @@ The Journal page provides a space for community engagement, featuring:
 - Product Data Rendering: Created a 100% data-driven gallery that generates product cards from a central JavaScript array, including search filtering and cart-counter preparation.  
 - Interactive Features: Added a custom lightbox for product image viewing with dynamic theme-aware glow effects and integrated Leaflet.js for a dynamic headquarters map on the About Us page.  
 - Technical SEO & Deployment: Finalized the project by implementing comprehensive SEO metadata, generating robots.txt and sitemap.xml files, and completing the deployment to Netlify
+---
+
 ### ✅ Finished (Part 3 js)
 ## [1.0.0] - 2026-06-13 @ 23:33 SAST
 ### Added
