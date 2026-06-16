@@ -101,14 +101,13 @@ const cartBtn = item.querySelector('.add-to-cart-btn');
 cartBtn.addEventListener('click', () => {
     addToCart(p); // This calls the function we will create next
 });
-
-        const img = item.querySelector('.clickable-image');
-        img.addEventListener('click', () => {
-            window.open(p.image, '_blank');
-        });
-
-        gallery.appendChild(item);
-    });
+// Inside your renderGallery function, update the image click event:
+const img = item.querySelector('.clickable-image');
+img.addEventListener('click', () => {
+    openLightbox(p.image); // This opens the lightbox instead of a new tab
+});
+gallery.appendChild(item);
+});
 }
 
 // 3. The Search Function
@@ -153,4 +152,18 @@ L.marker([-33.9259, 18.4133]).addTo(map)
     .bindPopup('Swanked Apparel - 11 Orphan Street, Cape Town')
     .openPopup();
 }
+
+/* =========================================================================
+   Lightbox Validation
+   ========================================================================== */
+   // Add these functions to your validation.js
+function openLightbox(imageUrl) {
+    document.getElementById('full-image').src = imageUrl;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
+
 

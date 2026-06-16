@@ -189,17 +189,22 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-14 @ 1:20 SAST] **UI Integration**: Added dynamic "Add to Cart" button generation and cart-counter preparation within the gallery template.
 - [2026-06-16 @ 17:48 SAST] Dynamic Location Map: Integrated Leaflet.js to display the Swanked headquarters on the About Us page.
 - [2026-06-16 @ 17:48 SAST] Security & Stability: Implemented "guard clauses" across validation.js to prevent script crashes on pages without specific DOM elements (gallery/forms).
+-[2026-06-14 @ 18:50 SAST] Lightbox Feature: Implemented a custom lightbox overlay for product images in shop.html to improve user experience and image viewing
+- [2026-06-14 @ 18:50 SAST] Dynamic Glow Effects: Added interactive box-shadow glow effects to the lightbox, which update dynamically based on the active theme (Blue/Orange).
+- [2026-06-14 @ 18:50 SAST] CSS Transitions: Implemented smooth transition properties for border-color and box-shadow shifts during theme switching.
+
 
 
 ### Changed
 - CSS: Migrated from hardcoded hex values to CSS variable-based theme engine.
 - Logic: Standardized all theme-related naming conventions to "negative" across CSS and JavaScript.
 - Validation: Cleaned up CSS syntax by removing redundant orphan brackets and streamlining variable scope.
--[2026-06-13 @ 11:47 SAST] Refactored JS: Updated all error injection methods from `.innerHTML` to `.textContent` for improved performance and security.
--[2026-06-13 @ 11:47 SAST] CSS Styling: Added `.error` class to ensure validation messages maintain consistent branding across "Nocturnal" and "Negative" themes.
-- [2026-06-14 @ 1:20 SAST] **Rendering Conflict**: Resolved conflicts caused by duplicate hard-coded HTML by moving to a 100% data-driven generation approach.
-- [2026-06-14 @ 1:20 SAST] **Initialization**: Added automatic function execution on page load to ensure the gallery populates immediately.
--[2026-06-14 @ 1:20 SAST]  **Data Persistence**: Integrated `JSON.parse` and `JSON.stringify` to maintain cart state across multiple browser pages.
+- [2026-06-13 @ 11:47 SAST] Refactored JS: Updated all error injection methods from `.innerHTML` to `.textContent` for improved performance and security.
+- [2026-06-13 @ 11:47 SAST] CSS Styling: Added `.error` class to ensure validation messages maintain consistent branding across "Nocturnal" and "Negative" themes.
+- [2026-06-14 @ 01:20 SAST] **Rendering Conflict**: Resolved conflicts caused by duplicate hard-coded HTML by moving to a 100% data-driven generation approach.
+- [2026-06-14 @ 01:20 SAST] **Initialization**: Added automatic function execution on page load to ensure the gallery populates immediately.
+- [2026-06-14 @ 01:20 SAST]  **Data Persistence**: Integrated `JSON.parse` and `JSON.stringify` to maintain cart state across multiple browser pages. 
+
 
 ### Fixed
 - Resolved theme-switching conflict where the "Negative" state was not persisting across page navigation.
@@ -208,6 +213,9 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-16 @ 17:48 SAST] Map Initialization: Corrected execution order of leaflet.js and validation.js to ensure the map container is defined before initialization.
 - [2026-06-16 @ 17:48 SAST] Gallery Rendering Logic: Resolved syntax errors in renderGallery to ensure the product grid renders correctly without breaking the script execution.
 - [2026-06-16 @ 17:48 SAST] Browser Security: Addressed file:/// origin issues by moving to a local development server workflow for map rendering.
+- [2026-06-14 @ 18:50 SAST] Navigation UI: Removed forced window.open behavior in favor of the new modal-based Lightbox to prevent unwanted browser tab clutter.
+- [2026-06-14 @ 18:50 SAST]Component Styling: Replaced hardcoded CSS colors with theme-aware selectors to ensure consistency with the user’s selected site theme.
+
  
 ### Security & Optimization [2026-06-14 @ 1:20 SAST]
 - **Code Consolidation**: Merged redundant display logic into a single source of truth (`renderGallery`).
