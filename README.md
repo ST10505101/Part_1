@@ -5,6 +5,9 @@ This project is a multi-page website developed for **Swanked**, a South African 
 
 The website translates a design proposal into a functional HTML-based site that reflects street culture, modern UI structure, and user engagement.
 
+### Live Website:
+[https://swanked.netlify.app/]
+
 ---
 
 ## Part 1 Details
@@ -258,6 +261,7 @@ The Journal page provides a space for community engagement, featuring:
 ### Security & Optimization [2026-06-14 @ 1:20 SAST]
 - **Code Consolidation**: Merged redundant display logic into a single source of truth (`renderGallery`).
 - **Scalability**: Designed the codebase to support future product additions simply by updating the `products` array.
+- [2026-06-17 @ 01:06 SAST]**Page Speed**: Implemented loading="lazy" attribute on all non-hero images across the site, including dynamic products in shop.html and static images in Journal.html, to reduce initial page load time.
 ---
 ## References
 (No date a) Swanked.  
@@ -286,6 +290,9 @@ Pin on website design (2025) Pinterest. Available at:
 <https://za.pinterest.com/pin/1688918606868899/ > [Accessed: 10 April 2026].  
 Zonefour (no date) ZONEFOUR. Available at:< https://zonefourclo.com/ > [Accessed: 10 
 April 2026]. 
+
+
+
 
 ---
 ## 👤 Author
