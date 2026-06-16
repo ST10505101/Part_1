@@ -198,6 +198,7 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-14 @ 20:25 SAST] SEO Metadata: Implemented unique <meta> descriptions, keywords, and <title> tags for all pages (Home, Shop, Journal, Archive, About Us).
 - [2026-06-14 @ 20:25 SAST] Open Graph Support: Added og:title, og:description, and og:url tags to ensure professional link previews on social media.
 - [2026-06-14 @ 20:25 SAST] Mobile Optimization: Standardized viewport meta tags across the entire site to ensure responsive rendering on mobile devices.
+- [2026-06-16 @ 21:07] Create robots.txt file
 
 
 
