@@ -167,14 +167,7 @@ header {
     font-size: 1.1rem;
     line-height: 1.6;
 }
-/* RESPONSIVE DESIGN: Safely folds the elements back into a clean stack on mobile */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Switches from side-by-side back to stacked layout safely */
-        gap: 40px;
-        padding: 40px 20px;
-    }
-}
+
 /* Style for the clean dash formatting in your HTML */
 .orange-dash {
     color: var(--accent-color); /* Automatically matches your active toggle accent color */
@@ -581,13 +574,6 @@ body.negative-mode .add-to-cart-btn {
     border-radius: 8px;
 }
 
-/* Responsive: Stack to 1 column on your tablet (Samsung Galaxy Tab 3 Lite) */
-@media (max-width: 768px) {
-    .archive-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ==========================================================================
    JOURNAL PAGE & SPOTIFY EMBED LAYOUT
    ========================================================================== */
@@ -632,12 +618,6 @@ button {
     font-size: 0.8rem;
 }
 
-/* Responsive adjustment */
-@media (max-width: 768px) {
-    .archive-grid {
-        grid-template-columns: 1fr;
-    }
-}
 /* Apply hover effect to Journal, Lookbook, Soundscape, and Article headings */
 h2, h3 {
     transition: transform 0.3s ease, color 0.3s ease;
@@ -784,13 +764,6 @@ input[type="submit"] {
     padding: 10px;
 }
 
-@media (min-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-    }
-}
-
 .product-image-wrapper img {
     width: 100%;    /* This keeps them fitting the width of the card */
     height: auto;   /* This is the key: it allows the height to scale naturally */
@@ -806,7 +779,6 @@ input[type="submit"] {
     /* Optional: change color to show it's active */
     color: var(--accent-color); 
 }
-
 
 /* =========================================================================
    SWANKED VIDEO BACKGROUND HEADER
@@ -861,4 +833,40 @@ input[type="submit"] {
    ========================================================================== */
 .no-transition * {
     transition: none !important;
+}
+
+/* ==========================================================================
+   MASTER MOBILE RESPONSIVE BLOCK (REPLACES THE 4 SCATTERED ONES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Header/Nav Fixes: Stacks everything */
+    header {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 10px !important;
+    }
+
+    #nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .toggle-label {
+        position: static !important;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* 2. About Section: Folds side-by-side into vertical stack */
+    .about-container {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+
+    /* 3. Archive Grid: Forces single column */
+    .archive-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
