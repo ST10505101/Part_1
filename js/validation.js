@@ -20,56 +20,60 @@ document.querySelector('.toggle-checkbox').addEventListener('change', (e) => {
 });
 
 /* =========================================================================
-   Form Validation
+   Form Validation (Guarded)
    ========================================================================== */
-document.getElementById('simpleForm').addEventListener('submit', function(event) {
-    // 1. Prevent default form submission (the page won't reload)
-    event.preventDefault(); 
+const contactForm = document.getElementById('simpleForm');
 
-    // 2. Capture form data
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-    const errorMsg = document.getElementById("errorMsg");
-    
-    // Clear previous errors
-    errorMsg.textContent = ""; 
+// The Guard Clause: Only run if 'simpleForm' exists on the current page
+if (contactForm) {
+    contactForm.addEventListener('submit', function(event) {
+        // 1. Prevent default form submission
+        event.preventDefault(); 
 
-    // 3. Validation Logic
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        // 2. Capture form data
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+        const errorMsg = document.getElementById("errorMsg");
+        
+        // Clear previous errors
+        if (errorMsg) errorMsg.textContent = ""; 
 
-    if (name === "" || email === "" || message === "") {
-        errorMsg.textContent = "All fields are required.";
-        return;
-    }
+        // 3. Validation Logic
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-    if (!emailPattern.test(email)) {
-        errorMsg.textContent = "Please enter a valid email address.";
-        return;
-    }
+        if (name === "" || email === "" || message === "") {
+            if (errorMsg) errorMsg.textContent = "All fields are required.";
+            return;
+        }
 
-    // 4. AJAX Submission using fetch()
-    // This demonstrates to your grader that you can send data asynchronously
-    const payload = { name, email, message };
+        if (!emailPattern.test(email)) {
+            if (errorMsg) errorMsg.textContent = "Please enter a valid email address.";
+            return;
+        }
 
-    fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-    })
-    .then(response => response.json())
-    .then(data => {
-        // 5. Dynamic DOM Manipulation: Update the UI to show success
-        document.querySelector('.form-container').innerHTML = `
-            <h3>Thank You, ${name}!</h3>
-            <p>Your message has been sent successfully. We will get back to you shortly.</p>
-        `;
-        console.log("AJAX Success:", data);
-    })
-    .catch(error => {
-        errorMsg.textContent = "Something went wrong. Please try again.";
+        // 4. AJAX Submission
+        const payload = { name, email, message };
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+            const container = document.querySelector('.form-container');
+            if (container) {
+                container.innerHTML = `
+                    <h3>Thank You, ${name}!</h3>
+                    <p>Your message has been sent successfully.</p>
+                `;
+            }
+        })
+        .catch(error => {
+            if (errorMsg) errorMsg.textContent = "Something went wrong. Please try again.";
+        });
     });
-});
+}
 
 /* =========================================================================
    Search and Gallery Validation
@@ -149,8 +153,14 @@ function addToCart(product) {
 }
 // 4. THE MOST IMPORTANT PART:
 // This line triggers the gallery to load the first time the page opens
-if (document.getElementById('gallery'))
-renderGallery(products);
+document.addEventListener('DOMContentLoaded', () => {
+    const gallery = document.getElementById('gallery');
+    if (gallery) {
+        renderGallery(products);
+    } else {
+        console.warn("Could not find #gallery element.");
+    }
+});
 
 /*========================================================================
 Dynamic Map Validation
