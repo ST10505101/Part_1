@@ -69,6 +69,7 @@ const products = [
 // 2. The Render Function (Your logic is perfect here)
 function renderGallery(productList) {
     const gallery = document.getElementById('gallery');
+    if (!gallery) return; // Exit if gallery element is not found
     gallery.innerHTML = ""; 
 
     productList.forEach(p => {
@@ -129,4 +130,27 @@ function addToCart(product) {
 }
 // 4. THE MOST IMPORTANT PART:
 // This line triggers the gallery to load the first time the page opens
+if (document.getElementById('gallery'))
 renderGallery(products);
+
+/*========================================================================
+Dynamic Map Validation
+==========================================================================*/
+const mapElement = document.getElementById('map');
+
+if (mapElement) {
+//1. Initialize the map centered at 11 orphan street, Cape Town
+const map = L.map('map').setView([-33.9259, 18.4133], 17);
+
+//2. Load OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+//3. Add a marker for the shop
+L.marker([-33.9259, 18.4133]).addTo(map)
+    .bindPopup('Swanked Apparel - 11 Orphan Street, Cape Town')
+    .openPopup();
+}
+

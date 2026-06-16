@@ -182,11 +182,14 @@ The Journal page provides a space for community engagement, featuring:
 - Head-level script initialization to bootstrap theme state and minimize render flicker.
 - [2026-06-13 @ 11:47 SAST] Form Validation: Implemented `validateForm()` function to handle name, email (Regex), and age range checks.
 - [2026-06-13 @ 11:47 SAST] Security: Integrated `.textContent` for error message injection to prevent potential XSS vulnerabilities.
--[2026-06-13 @ 11:47 SAST]  User Feedback: Added dedicated `<p id="errorMsg" class="error"></p>` container to provide real-time validation feedback.
+- [2026-06-13 @ 11:47 SAST]  User Feedback: Added dedicated `<p id="errorMsg" class="error"></p>` container to provide real-time validation feedback.
 - [2026-06-14 @ 1:20 SAST] **Dynamic Rendering**: Implemented `renderGallery` to generate product cards directly from a central `products` data array.
--[2026-06-14 @ 1:20 SAST] **Search Functionality**: Created `filterProducts` for real-time, case-insensitive searching of product names and categories.
--[2026-06-14 @ 1:20 SAST] **Image Interactivity**: Added `window.open` event listeners to product images, enabling "open in new tab" functionality upon click.
+- [2026-06-14 @ 1:20 SAST] **Search Functionality**: Created `filterProducts` for real-time, case-insensitive searching of product names and categories.
+- [2026-06-14 @ 1:20 SAST] **Image Interactivity**: Added `window.open` event listeners to product images, enabling "open in new tab" functionality upon click.
 - [2026-06-14 @ 1:20 SAST] **UI Integration**: Added dynamic "Add to Cart" button generation and cart-counter preparation within the gallery template.
+- [2026-06-16 @ 17:48 SAST] Dynamic Location Map: Integrated Leaflet.js to display the Swanked headquarters on the About Us page.
+- [2026-06-16 @ 17:48 SAST] Security & Stability: Implemented "guard clauses" across validation.js to prevent script crashes on pages without specific DOM elements (gallery/forms).
+
 
 ### Changed
 - CSS: Migrated from hardcoded hex values to CSS variable-based theme engine.
@@ -201,8 +204,11 @@ The Journal page provides a space for community engagement, featuring:
 ### Fixed
 - Resolved theme-switching conflict where the "Negative" state was not persisting across page navigation.
 - Optimized JavaScript execution order to improve theme rendering consistency.
--[2026-06-13 @ 11:47 SAST] Resolved minor layout shifting by applying `min-height` to the error message container.
-
+- [2026-06-13 @ 11:47 SAST] Resolved minor layout shifting by applying `min-height` to the error message container.
+- [2026-06-16 @ 17:48 SAST] Map Initialization: Corrected execution order of leaflet.js and validation.js to ensure the map container is defined before initialization.
+- [2026-06-16 @ 17:48 SAST] Gallery Rendering Logic: Resolved syntax errors in renderGallery to ensure the product grid renders correctly without breaking the script execution.
+- [2026-06-16 @ 17:48 SAST] Browser Security: Addressed file:/// origin issues by moving to a local development server workflow for map rendering.
+ 
 ### Security & Optimization [2026-06-14 @ 1:20 SAST]
 - **Code Consolidation**: Merged redundant display logic into a single source of truth (`renderGallery`).
 - **Scalability**: Designed the codebase to support future product additions simply by updating the `products` array.
@@ -234,7 +240,7 @@ Pin on website design (2025) Pinterest. Available at:
 <https://za.pinterest.com/pin/1688918606868899/ > [Accessed: 10 April 2026].  
 Zonefour (no date) ZONEFOUR. Available at:< https://zonefourclo.com/ > [Accessed: 10 
 April 2026]. 
-
+---
 ## 👤 Author
 **Ammaarah Mostert**  
 ST10505101  
