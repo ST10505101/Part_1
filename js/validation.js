@@ -202,4 +202,10 @@ function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
 }
 
-
+/* =========================================================================
+   Black Flash Fix
+   ========================================================================== */
+// Remove the 'no-transition' class once the page is fully loaded
+window.addEventListener('load', () => {
+    document.body.classList.remove('no-transition');
+});

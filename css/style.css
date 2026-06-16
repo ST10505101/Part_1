@@ -855,3 +855,10 @@ input[type="submit"] {
     box-sizing: border-box;
     min-height: 220px; /* Aligns container height with your showcase block */
 }
+
+/* =========================================================================
+   Black flash fix
+   ========================================================================== */
+.no-transition * {
+    transition: none !important;
+}
