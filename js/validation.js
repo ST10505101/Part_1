@@ -110,33 +110,28 @@ function renderGallery(productList) {
     productList.forEach(p => {
         const item = document.createElement('div');
         item.className = 'product-card';
-        item.innerHTML = `
-            <div class="product-image-wrapper">
-                <img src="${p.image}" alt="${p.name}" loading="lazy" width="300" height="300" class="clickable-image" style="cursor: pointer;">
-            </div>
-            <div class="product-info">
-                <div class="product-text-meta">
-                    <span class="product-brand">${p.category}</span>
-                    <h3 class="product-title">${p.name}</h3>
-                    <span class="product-price">${p.price}</span>
-                </div>
+       item.innerHTML = `
+    <div class="product-image-wrapper">
+        <img src="${p.image}" alt="${p.name}" loading="lazy" width="300" height="300" class="clickable-image" style="cursor: pointer;">
+    </div>
+    <div class="product-info">
+        <div class="product-text-meta">
+            <span class="product-brand">${p.category}</span>
+            <h3 class="product-title">${p.name}</h3>
+            <span class="product-price">${p.price}</span>
+        </div>
+        
+        <button class="add-to-cart-btn" onclick="addToCart('${p.name}')" aria-label="Add to cart">
             <div class="cart-icon-wrapper">
-
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
-
                     <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-
                     <line x1="3" y1="6" x2="21" y2="6"></line>
-
                     <path d="M16 10a4 4 0 0 1-8 0"></path>
-
                 </svg>
-
             </div>
-
         </button>
-            </div>
-        `;
+    </div>
+`;
         gallery.appendChild(item);
     });
 }
