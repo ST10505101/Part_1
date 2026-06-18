@@ -346,7 +346,7 @@ hr {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #FF4500; /* Swanked Orange */
+    background: var(--accent-color); /* Swanked Orange */
     color: white;
     padding: 15px;
     border-radius: 5px;

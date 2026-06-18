@@ -257,8 +257,8 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-14 @ 18:50 SAST]Component Styling: Replaced hardcoded CSS colors with theme-aware selectors to ensure consistency with the user’s selected site theme.
 - [2026-06-16 @ 22:36 SAST] Shop: added a guard clause in validation.js after the shop paged crashed after it was deployed
 - [2026-06-16 @ 22:46 SAST] Resolved the black flash that kept happening as soon as the theme was applied
-- 
-- [2026-06-17 @ 00:19 SAST] the shop pages issues are resolved
+- [2026-06-19 @ 00:19 SAST] the shop pages issues are resolved
+- [2026-06-19 @ 01:14 SAST] fixed the add to cart button
 
 
  
