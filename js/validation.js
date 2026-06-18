@@ -112,7 +112,7 @@ function renderGallery(productList) {
         item.className = 'product-card';
        item.innerHTML = `
     <div class="product-image-wrapper">
-        <img src="${p.image}" alt="${p.name}" loading="lazy" width="300" height="300" class="clickable-image" style="cursor: pointer;">
+        <img src="${p.image}" alt="${p.name}" loading="lazy" width="300" height="300" class="clickable-image" onclick="openLightbox('${p.image}')" style="cursor: pointer;">
     </div>
     <div class="product-info">
         <div class="product-text-meta">
