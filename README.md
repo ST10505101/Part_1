@@ -227,6 +227,7 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-14 @ 20:25 SAST] Mobile Optimization: Standardized viewport meta tags across the entire site to ensure responsive rendering on mobile devices.
 - [2026-06-16 @ 21:07] Create robots.txt file
 - [2026-06-16 @ 21:07] Added the sitemap.xml file 
+- [2026-06-17 @ 00:19 SAST] Added a cart count and a custom added to cart notification
 
 
 
@@ -242,6 +243,7 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-14 @ 19:35 SAST] Refactored Contact Form: Removed legacy onsubmit attributes and hardcoded actions to favor modern, event-driven JavaScript listeners.
 - [2026-06-14 @ 19:35 SAST] Code Cleanup: Removed redundant age input fields and validation logic, streamlining the contact.html structure.
 - [2026-06-14 @ 19:35 SAST]UX Improvements: Implemented dynamic data capture to ensure form inputs are processed and ready for asynchronous transmission.
+- [2026-06-17 @ 00:19 SAST] Changed video background on homepage to make the nav bar readable.
 
 
 ### Fixed
@@ -255,6 +257,8 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-14 @ 18:50 SAST]Component Styling: Replaced hardcoded CSS colors with theme-aware selectors to ensure consistency with the user’s selected site theme.
 - [2026-06-16 @ 22:36 SAST] Shop: added a guard clause in validation.js after the shop paged crashed after it was deployed
 - [2026-06-16 @ 22:46 SAST] Resolved the black flash that kept happening as soon as the theme was applied
+- 
+- [2026-06-17 @ 00:19 SAST]
 
 
  

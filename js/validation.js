@@ -168,6 +168,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function showToast(message) {
+    const toast = document.getElementById("toast");
+    toast.textContent = message;
+    toast.style.display = "block";
+    setTimeout(() => { toast.style.display = "none"; }, 3000);
+}
+
+/* Force reasonable image size in gallery/search */
+.product-item img{
+    max-width: 300px; /* Fixed from 100%  */
+    width: 100%; /* Ensure it scales down on smaller screens */
+    height: auto;
+}
+
 /*========================================================================
 Dynamic Map Validation
 ==========================================================================*/

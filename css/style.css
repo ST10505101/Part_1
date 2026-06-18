@@ -342,6 +342,17 @@ hr {
     color: var(--subtle-text);
 }
 
+#toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #FF4500; /* Swanked Orange */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: none; /* hidden by default */
+    z-index: 2000;
+}
 /* ==========================================================================
    BULLETPROOF LEMKUS HEADER ENGINE (WORKS EVERYWHERE)
    ========================================================================== */
