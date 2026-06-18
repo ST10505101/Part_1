@@ -258,7 +258,7 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-16 @ 22:36 SAST] Shop: added a guard clause in validation.js after the shop paged crashed after it was deployed
 - [2026-06-16 @ 22:46 SAST] Resolved the black flash that kept happening as soon as the theme was applied
 - 
-- [2026-06-17 @ 00:19 SAST]
+- [2026-06-17 @ 00:19 SAST] the shop pages issues are resolved
 
 
  
