@@ -120,8 +120,6 @@ function renderGallery(productList) {
                     <h3 class="product-title">${p.name}</h3>
                     <span class="product-price">${p.price}</span>
                 </div>
-                  <button class="add-to-cart-btn" aria-label="Add to cart">
-
             <div class="cart-icon-wrapper">
 
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="cart-icon">
