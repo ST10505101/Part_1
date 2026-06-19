@@ -219,7 +219,19 @@ header {
 :root:has(.toggle-checkbox:checked) .logo-image {
     filter: invert(1);       /* Flips black graphics to white instantly */
 }   
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
 
+.logo-link:hover {
+    opacity: 0.8; /* A nice "professional" hover effect */
+}
+
+.logo-link img {
+    display: block; /* Removes the tiny ghost space under the image */
+}
 /* ==========================================================================
    STREETWEAR EDITORIAL TYPOGRAPHY & LAYOUT
    ========================================================================== */

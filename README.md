@@ -228,6 +228,7 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-16 @ 21:07] Create robots.txt file
 - [2026-06-16 @ 21:07] Added the sitemap.xml file 
 - [2026-06-17 @ 00:19 SAST] Added a cart count and a custom added to cart notification
+- [2026-06-19  @ 02:15 SAST] Added a link to the logo to take user back to homepage
 
 
 
