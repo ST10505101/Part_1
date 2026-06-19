@@ -223,6 +223,8 @@ header {
     display: inline-block;
     text-decoration: none;
     transition: opacity 0.3s ease;
+    position: relative;
+    z-index: 9999; /* This forces it to the very front layer */
 }
 
 .logo-link:hover {
