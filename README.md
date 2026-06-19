@@ -262,8 +262,8 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-19 @ 01:14 SAST] fixed the add to cart button
 - [2026-06-19  @ 02:03 SAST] fixed the headings that cut off when hovered over
 - [2026-06-19  @ 02:03 SAST] fixed image size when searched
-- [2026-06-19  @  SAST]
-- [2026-06-19  @  SAST]
+- [2026-06-19  @ 02:32 SAST] fixed journal page
+
 
 
 
