@@ -364,12 +364,13 @@ hr {
     letter-spacing: -1px;
     color: var(--text-color);
     display: inline-block;
+    /* ADD THESE TWO LINES */
+    padding: 10px;        
+    overflow: visible;    
     
-    /* Smooth transition for when the mouse touches or leaves the text */
-    transition: letter-spacing 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
-                transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+    transition: letter-spacing 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+                transform 0.4s cubic-bezier(0.25, 1, 0.5, 1),
                 color 0.3s ease;
-    
     transform-origin: left center;
 }
 
@@ -408,14 +409,15 @@ hr {
 /* This turns your stacked items into a gorgeous multi-column grid layout */
 .shop-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* This makes the grid items only as wide as they need to be, up to 350px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px)); 
+    justify-content: center; /* This centers the single card */
     gap: 40px 24px;
     padding: 60px 0;
     max-width: 1200px;
     margin: 0 auto;
     width: 100%;
 }
-
 .product-card {
     display: flex;
     flex-direction: column;

@@ -259,6 +259,11 @@ The Journal page provides a space for community engagement, featuring:
 - [2026-06-16 @ 22:46 SAST] Resolved the black flash that kept happening as soon as the theme was applied
 - [2026-06-19 @ 00:19 SAST] the shop pages issues are resolved
 - [2026-06-19 @ 01:14 SAST] fixed the add to cart button
+- [2026-06-19  @ 02:03 SAST] fixed the headings that cut off when hovered over
+- [2026-06-19  @ 02:03 SAST] fixed image size when searched
+- [2026-06-19  @  SAST]
+- [2026-06-19  @  SAST]
+
 
 
  
