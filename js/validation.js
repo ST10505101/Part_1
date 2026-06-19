@@ -213,3 +213,6 @@ function closeLightbox() {
 window.addEventListener('load', () => {
     document.body.classList.remove('no-transition');
 });
+/* =========================================================================
+   END OF JS - ALL YOUR BEAUTIFUL SCRIPTS ARE ABOVE THIS LINE  
+    ========================================================================== */
